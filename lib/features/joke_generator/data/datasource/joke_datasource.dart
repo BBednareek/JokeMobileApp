@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:joke_app/core/constants/api_routes.dart';
+import 'package:joke_app/core/constants/paths.dart';
 import 'package:joke_app/core/factories/dio_factory.dart';
 import 'package:joke_app/features/joke_generator/domain/entities/joke_entity.dart';
 
@@ -27,7 +27,7 @@ class JokeRemoteDatasourceImpl implements JokeRemoteDatasource {
   ) async {
     try {
       final response = await dioFactory.dio
-          .get(Routes.jokeUrl(categories, language, flags, type));
+          .get(Pathes.jokeUrl(categories, language, flags, type));
 
       return JokeEntity.fromJson(response.data);
     } catch (e) {
