@@ -7,7 +7,7 @@ class UnconnectedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: onNotAvailableConnection()),
+      body: SafeArea(child: onNotAvailableConnection(context)),
     );
   }
 }

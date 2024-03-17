@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:joke_app/features/joke_generator/presentation/widgets/joke_widgets.dart';
 import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
-class JokePage extends StatelessWidget {
-  const JokePage({super.key});
+class JokeDetailsPage extends StatelessWidget {
+  const JokeDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => PickValueBloc(),
-      child: const _JokePage(),
+      child: const _PickJokePage(),
     );
   }
 }
 
-class _JokePage extends StatelessWidget {
-  const _JokePage();
+class _PickJokePage extends StatelessWidget {
+  const _PickJokePage();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            header(),
-          ],
+          children: [],
         ),
       ),
     );

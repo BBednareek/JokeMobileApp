@@ -24,11 +24,8 @@ Future<void> main() async {
   configureDependencies();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  runApp(
-    BlocProvider(
-        create: (_) => locator<ConnectivityCheckerBloc>(),
-        child: const MyApp()),
-  );
+  runApp(BlocProvider(
+      create: (_) => locator<ConnectivityCheckerBloc>(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

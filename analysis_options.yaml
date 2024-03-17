@@ -3,7 +3,7 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   exclude:
     - "**/*.g.dart"
-    - "**/*.gr.dart"
+    - "**/*.freezed.dart"
     - "lib/core/di/injectable.config.dart"
     
   errors:

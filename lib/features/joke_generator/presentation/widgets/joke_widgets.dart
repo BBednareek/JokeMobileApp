@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:joke_app/core/constants/query_params.dart';
 import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 Widget header() {
@@ -38,27 +37,27 @@ Widget chooseCategories() {
           );
         },
       ),
-      BlocBuilder<PickValueBloc, PickValueState>(
-        builder: (context, state) {
-          return ListView.builder(
-            itemCount: categories.length,
-            itemBuilder: (context, index) {
-              return CheckboxListTile(
-                value: state.selectedCheckboxes.contains(index),
-                title: Text(categories[index]),
-                onChanged: (newValue) {
-                  context
-                      .read<PickValueBloc>()
-                      .add(PickValueEvent.changeCheckboxRequested(index));
-                  context
-                      .read<PickValueBloc>()
-                      .add(PickValueEvent.addStringsToList(categories));
-                },
-              );
-            },
-          );
-        },
-      ),
+      // BlocBuilder<PickValueBloc, PickValueState>(
+      //   builder: (context, state) {
+      //     return ListView.builder(
+      //       itemCount: categories.length,
+      //       itemBuilder: (context, index) {
+      //         return CheckboxListTile(
+      //           value: state.selectedCheckboxes.contains(index),
+      //           title: Text(categories[index]),
+      //           onChanged: (newValue) {
+      //             context
+      //                 .read<PickValueBloc>()
+      //                 .add(PickValueEvent.changeCheckboxRequested(index));
+      //             context
+      //                 .read<PickValueBloc>()
+      //                 .add(PickValueEvent.addStringsToList(categories));
+      //           },
+      //         );
+      //       },
+      //     );
+      //   },
+      // ),
     ],
   );
 }

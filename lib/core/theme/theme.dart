@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:joke_app/core/theme/colors.dart';
 
 ThemeData darkTheme = ThemeData(
-  useMaterial3: true,
+  useMaterial3: false,
   brightness: Brightness.dark,
   scaffoldBackgroundColor: ProjectColors.darkBackground,
   colorScheme: const ColorScheme(
