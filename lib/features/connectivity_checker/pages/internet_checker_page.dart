@@ -13,10 +13,9 @@ class InitialConnectionChecker extends StatelessWidget {
       body: SafeArea(
         child: BlocBuilder<ConnectivityCheckerBloc, ConnectivityCheckerState>(
           builder: (context, state) {
-            state.isConnectionAvailable
+            return state.isConnectionAvailable
                 ? const StartingPage()
                 : const UnconnectedPage();
-            return const CircularProgressIndicator();
           },
         ),
       ),

@@ -1,11 +1,13 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'connectivity_checker_bloc.freezed.dart';
 part 'connectivity_checker_event.dart';
 part 'connectivity_checker_state.dart';
 
+@injectable
 class ConnectivityCheckerBloc
     extends Bloc<ConnectivityCheckerEvent, ConnectivityCheckerState> {
   ConnectivityCheckerBloc() : super(const ConnectivityCheckerState()) {
