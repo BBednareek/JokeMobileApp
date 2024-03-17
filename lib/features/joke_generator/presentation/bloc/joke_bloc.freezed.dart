@@ -165,7 +165,7 @@ abstract class _GetJoke implements JokeEvent {
 
 /// @nodoc
 mixin _$JokeState {
-  JokeEntity get jokeEntity => throw _privateConstructorUsedError;
+  JokeEntity? get jokeEntity => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
   String get categories => throw _privateConstructorUsedError;
   String get flags => throw _privateConstructorUsedError;
@@ -183,14 +183,14 @@ abstract class $JokeStateCopyWith<$Res> {
       _$JokeStateCopyWithImpl<$Res, JokeState>;
   @useResult
   $Res call(
-      {JokeEntity jokeEntity,
+      {JokeEntity? jokeEntity,
       String errorMessage,
       String categories,
       String flags,
       String langauge,
       String type});
 
-  $JokeEntityCopyWith<$Res> get jokeEntity;
+  $JokeEntityCopyWith<$Res>? get jokeEntity;
 }
 
 /// @nodoc
@@ -206,7 +206,7 @@ class _$JokeStateCopyWithImpl<$Res, $Val extends JokeState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? jokeEntity = null,
+    Object? jokeEntity = freezed,
     Object? errorMessage = null,
     Object? categories = null,
     Object? flags = null,
@@ -214,10 +214,10 @@ class _$JokeStateCopyWithImpl<$Res, $Val extends JokeState>
     Object? type = null,
   }) {
     return _then(_value.copyWith(
-      jokeEntity: null == jokeEntity
+      jokeEntity: freezed == jokeEntity
           ? _value.jokeEntity
           : jokeEntity // ignore: cast_nullable_to_non_nullable
-              as JokeEntity,
+              as JokeEntity?,
       errorMessage: null == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -243,8 +243,12 @@ class _$JokeStateCopyWithImpl<$Res, $Val extends JokeState>
 
   @override
   @pragma('vm:prefer-inline')
-  $JokeEntityCopyWith<$Res> get jokeEntity {
-    return $JokeEntityCopyWith<$Res>(_value.jokeEntity, (value) {
+  $JokeEntityCopyWith<$Res>? get jokeEntity {
+    if (_value.jokeEntity == null) {
+      return null;
+    }
+
+    return $JokeEntityCopyWith<$Res>(_value.jokeEntity!, (value) {
       return _then(_value.copyWith(jokeEntity: value) as $Val);
     });
   }
@@ -259,7 +263,7 @@ abstract class _$$JokeStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {JokeEntity jokeEntity,
+      {JokeEntity? jokeEntity,
       String errorMessage,
       String categories,
       String flags,
@@ -267,7 +271,7 @@ abstract class _$$JokeStateImplCopyWith<$Res>
       String type});
 
   @override
-  $JokeEntityCopyWith<$Res> get jokeEntity;
+  $JokeEntityCopyWith<$Res>? get jokeEntity;
 }
 
 /// @nodoc
@@ -281,7 +285,7 @@ class __$$JokeStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? jokeEntity = null,
+    Object? jokeEntity = freezed,
     Object? errorMessage = null,
     Object? categories = null,
     Object? flags = null,
@@ -289,27 +293,27 @@ class __$$JokeStateImplCopyWithImpl<$Res>
     Object? type = null,
   }) {
     return _then(_$JokeStateImpl(
-      null == jokeEntity
+      jokeEntity: freezed == jokeEntity
           ? _value.jokeEntity
           : jokeEntity // ignore: cast_nullable_to_non_nullable
-              as JokeEntity,
-      null == errorMessage
+              as JokeEntity?,
+      errorMessage: null == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      null == categories
+      categories: null == categories
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as String,
-      null == flags
+      flags: null == flags
           ? _value.flags
           : flags // ignore: cast_nullable_to_non_nullable
               as String,
-      null == langauge
+      langauge: null == langauge
           ? _value.langauge
           : langauge // ignore: cast_nullable_to_non_nullable
               as String,
-      null == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
@@ -321,16 +325,15 @@ class __$$JokeStateImplCopyWithImpl<$Res>
 
 class _$JokeStateImpl implements _JokeState {
   const _$JokeStateImpl(
-      [this.jokeEntity = null,
+      {this.jokeEntity,
       this.errorMessage = '',
       this.categories = 'ANY',
       this.flags = '',
       this.langauge = '',
-      this.type = '']);
+      this.type = ''});
 
   @override
-  @JsonKey()
-  final JokeEntity jokeEntity;
+  final JokeEntity? jokeEntity;
   @override
   @JsonKey()
   final String errorMessage;
@@ -382,15 +385,15 @@ class _$JokeStateImpl implements _JokeState {
 
 abstract class _JokeState implements JokeState {
   const factory _JokeState(
-      [final JokeEntity jokeEntity,
+      {final JokeEntity? jokeEntity,
       final String errorMessage,
       final String categories,
       final String flags,
       final String langauge,
-      final String type]) = _$JokeStateImpl;
+      final String type}) = _$JokeStateImpl;
 
   @override
-  JokeEntity get jokeEntity;
+  JokeEntity? get jokeEntity;
   @override
   String get errorMessage;
   @override
