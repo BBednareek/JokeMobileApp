@@ -177,6 +177,7 @@ abstract class _InternetConnectionChecker implements ConnectivityCheckerEvent {
 
 /// @nodoc
 mixin _$ConnectivityCheckerState {
+  bool get checkingConnection => throw _privateConstructorUsedError;
   bool get isConnectionAvailable => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -190,7 +191,7 @@ abstract class $ConnectivityCheckerStateCopyWith<$Res> {
           $Res Function(ConnectivityCheckerState) then) =
       _$ConnectivityCheckerStateCopyWithImpl<$Res, ConnectivityCheckerState>;
   @useResult
-  $Res call({bool isConnectionAvailable});
+  $Res call({bool checkingConnection, bool isConnectionAvailable});
 }
 
 /// @nodoc
@@ -207,9 +208,14 @@ class _$ConnectivityCheckerStateCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? checkingConnection = null,
     Object? isConnectionAvailable = null,
   }) {
     return _then(_value.copyWith(
+      checkingConnection: null == checkingConnection
+          ? _value.checkingConnection
+          : checkingConnection // ignore: cast_nullable_to_non_nullable
+              as bool,
       isConnectionAvailable: null == isConnectionAvailable
           ? _value.isConnectionAvailable
           : isConnectionAvailable // ignore: cast_nullable_to_non_nullable
@@ -227,7 +233,7 @@ abstract class _$$ConnectivityCheckerStateImplCopyWith<$Res>
       __$$ConnectivityCheckerStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isConnectionAvailable});
+  $Res call({bool checkingConnection, bool isConnectionAvailable});
 }
 
 /// @nodoc
@@ -243,9 +249,14 @@ class __$$ConnectivityCheckerStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? checkingConnection = null,
     Object? isConnectionAvailable = null,
   }) {
     return _then(_$ConnectivityCheckerStateImpl(
+      null == checkingConnection
+          ? _value.checkingConnection
+          : checkingConnection // ignore: cast_nullable_to_non_nullable
+              as bool,
       null == isConnectionAvailable
           ? _value.isConnectionAvailable
           : isConnectionAvailable // ignore: cast_nullable_to_non_nullable
@@ -257,15 +268,19 @@ class __$$ConnectivityCheckerStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ConnectivityCheckerStateImpl implements _ConnectivityCheckerState {
-  const _$ConnectivityCheckerStateImpl([this.isConnectionAvailable = false]);
+  const _$ConnectivityCheckerStateImpl(
+      [this.checkingConnection = true, this.isConnectionAvailable = false]);
 
+  @override
+  @JsonKey()
+  final bool checkingConnection;
   @override
   @JsonKey()
   final bool isConnectionAvailable;
 
   @override
   String toString() {
-    return 'ConnectivityCheckerState(isConnectionAvailable: $isConnectionAvailable)';
+    return 'ConnectivityCheckerState(checkingConnection: $checkingConnection, isConnectionAvailable: $isConnectionAvailable)';
   }
 
   @override
@@ -273,12 +288,15 @@ class _$ConnectivityCheckerStateImpl implements _ConnectivityCheckerState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConnectivityCheckerStateImpl &&
+            (identical(other.checkingConnection, checkingConnection) ||
+                other.checkingConnection == checkingConnection) &&
             (identical(other.isConnectionAvailable, isConnectionAvailable) ||
                 other.isConnectionAvailable == isConnectionAvailable));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isConnectionAvailable);
+  int get hashCode =>
+      Object.hash(runtimeType, checkingConnection, isConnectionAvailable);
 
   @JsonKey(ignore: true)
   @override
@@ -289,9 +307,12 @@ class _$ConnectivityCheckerStateImpl implements _ConnectivityCheckerState {
 }
 
 abstract class _ConnectivityCheckerState implements ConnectivityCheckerState {
-  const factory _ConnectivityCheckerState([final bool isConnectionAvailable]) =
-      _$ConnectivityCheckerStateImpl;
+  const factory _ConnectivityCheckerState(
+      [final bool checkingConnection,
+      final bool isConnectionAvailable]) = _$ConnectivityCheckerStateImpl;
 
+  @override
+  bool get checkingConnection;
   @override
   bool get isConnectionAvailable;
   @override

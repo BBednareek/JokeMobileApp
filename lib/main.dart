@@ -6,7 +6,8 @@ import 'package:joke_app/core/bloc_observer.dart';
 import 'package:joke_app/core/di/injectable.dart';
 import 'package:joke_app/core/theme/theme.dart';
 import 'package:joke_app/features/connectivity_checker/bloc/connectivity_checker_bloc.dart';
-import 'package:joke_app/features/joke_generator/presentation/presentation/joke_page.dart';
+import 'package:joke_app/features/connectivity_checker/pages/starting_page.dart';
+import 'package:joke_app/features/connectivity_checker/pages/unconnected_page.dart';
 import 'package:joke_app/features/theme_cubit/domain/entities/theme_entity.dart';
 import 'package:joke_app/features/theme_cubit/presentation/theme_cubit.dart';
 import 'package:path_provider/path_provider.dart';
@@ -32,9 +33,7 @@ class MyApp extends StatelessWidget {
       onLongPress: () => ChuckerFlutter.showChuckerScreen(),
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(
-            create: (context) => locator<ThemeCubit>(),
-          ),
+          BlocProvider(create: (context) => locator<ThemeCubit>()),
           BlocProvider(
             create: (context) => ConnectivityCheckerBloc()
               ..add(const ConnectivityCheckerEvent.internetConnectionChecker()),
@@ -52,8 +51,8 @@ class MyApp extends StatelessWidget {
                   darkTheme: darkTheme,
                   themeMode: themeState.theme,
                   home: connectivityState.isConnectionAvailable
-                      ? const JokePage()
-                      : null,
+                      ? const StartingPage()
+                      : const UnconnectedPage(),
                 );
               },
             );

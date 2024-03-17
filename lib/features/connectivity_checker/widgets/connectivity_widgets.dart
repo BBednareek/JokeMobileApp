@@ -10,7 +10,7 @@ Widget onAvailableConnection() {
   ]);
 }
 
-onNotAvailableConnection() {
+Widget onNotAvailableConnection() {
   return const Column(
     children: [Text("NO CONNECTION")],
   );
