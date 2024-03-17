@@ -1,22 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:joke_app/features/joke_generator/domain/entities/joke_entity.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:joke_app/core/constants/query_params.dart';
+import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
-displayJoke(JokeEntity jokeEntity) {
-  return Column(
+Widget header() {
+  return const Column(
     children: [
-      jokeEntity.type != 'single'
-          ? Text(jokeEntity.setup)
-          : const SizedBox.shrink(),
+      Text("Joke generator"),
+      SizedBox(height: 5),
+      Text("Please, provide us with informations about joke you want to read")
     ],
   );
 }
 
-twoPartJoke(JokeEntity jokeEntity) {
+Widget chooseCategories() {
   return Column(
     children: [
-      Text(jokeEntity.setup),
-      const SizedBox(height: 10),
-      Text(jokeEntity.delivery)
+      BlocBuilder<PickValueBloc, PickValueState>(
+        builder: (context, state) {
+          return RadioListTile(
+            value: -1,
+            groupValue: -1,
+            onChanged: (newValue) {
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.changeRadioRequested(-1));
+            },
+          );
+        },
+      ),
+      BlocBuilder<PickValueBloc, PickValueState>(
+        builder: (context, state) {
+          return ListView.builder(
+            itemCount: categories.length,
+            itemBuilder: (context, index) {
+              return CheckboxListTile(
+                value: state.selectedCheckboxes.contains(index),
+                title: Text(categories[index]),
+                onChanged: (newValue) {
+                  context
+                      .read<PickValueBloc>()
+                      .add(PickValueEvent.changeCheckboxRequested(index));
+                  context
+                      .read<PickValueBloc>()
+                      .add(PickValueEvent.addStringsToList(categories));
+                },
+              );
+            },
+          );
+        },
+      ),
     ],
   );
 }
