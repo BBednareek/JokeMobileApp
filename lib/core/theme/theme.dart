@@ -28,36 +28,32 @@ ThemeData darkTheme = ThemeData(
   textTheme: const TextTheme(
     /// [48PX, BOLD]
     bodyLarge: TextStyle(
-      fontSize: 48,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 48,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [24PX, BOLD]
     bodyMedium: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [16PX, BOLD]
     bodySmall: TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [24PX NORMAL]
-    displayLarge: TextStyle(
-      fontSize: 24,
-      fontFamily: 'Poppins',
-    ),
+    displayLarge:
+        TextStyle(fontSize: 24, fontFamily: 'Poppins', color: Colors.white),
 
     /// [16PX NORMAL]
-    displayMedium: TextStyle(
-      fontSize: 16,
-      fontFamily: 'Poppins',
-    ),
+    displayMedium:
+        TextStyle(fontSize: 16, fontFamily: 'Poppins', color: Colors.white),
   ),
 );
 
@@ -87,35 +83,31 @@ ThemeData lightTheme = ThemeData(
   textTheme: const TextTheme(
     /// [48PX, BOLD]
     bodyLarge: TextStyle(
-      fontSize: 48,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 48,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [24PX, BOLD]
     bodyMedium: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [16PX, BOLD]
     bodySmall: TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-    ),
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Poppins',
+        color: Colors.white),
 
     /// [24PX NORMAL]
-    displayLarge: TextStyle(
-      fontSize: 24,
-      fontFamily: 'Poppins',
-    ),
+    displayLarge:
+        TextStyle(fontSize: 24, fontFamily: 'Poppins', color: Colors.white),
 
     /// [16PX NORMAL]
-    displayMedium: TextStyle(
-      fontSize: 16,
-      fontFamily: 'Poppins',
-    ),
+    displayMedium:
+        TextStyle(fontSize: 16, fontFamily: 'Poppins', color: Colors.white),
   ),
 );

@@ -5,16 +5,27 @@ Widget onAvailableConnection(BuildContext context) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Joke Generator", style: Theme.of(context).textTheme.bodyLarge),
-        const SizedBox(height: 10),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text("Generate new joke"),
+        Text(
+          "Joke Generator",
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: Theme.of(context).colorScheme.onBackground,
+              ),
         ),
         const SizedBox(height: 10),
         ElevatedButton(
           onPressed: () {},
-          child: const Text("Favourite jokes"),
+          child: Text(
+            "Generate new joke",
+            style: Theme.of(context).textTheme.displayMedium,
+          ),
+        ),
+        const SizedBox(height: 10),
+        ElevatedButton(
+          onPressed: () {},
+          child: Text(
+            "Favourite jokes",
+            style: Theme.of(context).textTheme.displayMedium,
+          ),
         ),
       ],
     ),
