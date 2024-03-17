@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         child: BlocBuilder<ThemeCubit, ThemeEntity>(
           builder: (context, state) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               navigatorObservers: [ChuckerFlutter.navigatorObserver],
               title: 'Joke generator application',
               theme: lightTheme,
