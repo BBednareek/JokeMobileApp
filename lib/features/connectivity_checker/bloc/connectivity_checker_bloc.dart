@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -12,5 +13,11 @@ class ConnectivityCheckerBloc
   }
 
   _checkInternetConnection(_InternetConnectionChecker event,
-      Emitter<ConnectivityCheckerState> emit) {}
+      Emitter<ConnectivityCheckerState> emit) async {
+    final result = await Connectivity().checkConnectivity();
+
+    result != ConnectivityResult.mobile || result != ConnectivityResult.wifi
+        ? emit(state.copyWith(isConnectionAvailable: false))
+        : emit(state.copyWith(isConnectionAvailable: true));
+  }
 }
