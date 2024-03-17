@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'pick_value_bloc.freezed.dart';
 part 'pick_value_event.dart';
 part 'pick_value_state.dart';
-part 'pick_value_bloc.freezed.dart';
 
 class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
   PickValueBloc() : super(const PickValueState()) {
@@ -29,8 +29,5 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
   }
 
   _onAddStringsToList(
-      _AddStringsToList event, Emitter<PickValueState> emit) async {
-    //TODO add title of tile from radio/checkbox select to list and emit it to proper state
-    //TODO try to emit with value from event(category: ..., etc)
-  }
+      _AddStringsToList event, Emitter<PickValueState> emit) async {}
 }

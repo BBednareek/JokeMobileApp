@@ -12,6 +12,14 @@ import 'package:joke_app/features/theme_cubit/domain/entities/theme_entity.dart'
 import 'package:joke_app/features/theme_cubit/presentation/theme_cubit.dart';
 import 'package:path_provider/path_provider.dart';
 
+//TODO Create pick screen
+//TODO Create throwableFailure
+//TODO Create favourtie screen
+//TODO Create generated joke screen
+//TODO Create const Paddings etc...
+//TODO Create api route generator
+//TODO Add title of tile form radio/checkbox select to list
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
