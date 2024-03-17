@@ -24,45 +24,56 @@ class Failure extends Equatable {
   });
 
   factory Failure.throwFailure(dynamic exceptionType) {
-    if (exceptionType is ServerException) {
-      return const Failure(
-          type: FailureType.server, errorMessage: "Server exception");
-    } else if (exceptionType is ForbiddenException) {
-      return const Failure(
-          type: FailureType.forbidden, errorMessage: "Forbidden exception");
-    } else if (exceptionType is NotFoundException) {
-      return const Failure(
-          type: FailureType.notFound, errorMessage: "Not found exception");
-    } else if (exceptionType is ConnectionTimeOutException) {
-      return const Failure(
-          type: FailureType.connectionTimeout,
-          errorMessage: "Connection timeout exception");
-    } else if (exceptionType is NoInternetConnectionException) {
-      return const Failure(
-          type: FailureType.noInternetConnection,
-          errorMessage: "No internet connection exception");
-    } else if (exceptionType is TooManyRequestsException) {
-      return const Failure(
-          type: FailureType.tooManyRequests,
-          errorMessage: "Too many requests exception");
-    } else if (exceptionType is BadRequestException) {
-      return const Failure(
-          type: FailureType.badRequest, errorMessage: "Bad request exception");
-    } else if (exceptionType is PayloadToLargeException) {
-      return const Failure(
-          type: FailureType.payloadToLarge,
-          errorMessage: "Payload to large exception");
-    } else if (exceptionType is UriTooLongException) {
-      return const Failure(
-          type: FailureType.uriToLong, errorMessage: "URI too long exception");
-    } else if (exceptionType is OriginUnreachableException) {
-      return const Failure(
-          type: FailureType.originUnreachable,
-          errorMessage: "Origin unreachable exception");
+    FailureType type;
+    String errorMessage;
+
+    switch (exceptionType.runtimeType) {
+      case ServerException:
+        type = FailureType.server;
+        errorMessage = "Server exception";
+        break;
+      case ForbiddenException:
+        type = FailureType.forbidden;
+        errorMessage = "Forbidden exception";
+        break;
+      case NotFoundException:
+        type = FailureType.notFound;
+        errorMessage = "Not found exception";
+        break;
+      case ConnectionTimeOutException:
+        type = FailureType.connectionTimeout;
+        errorMessage = "Connection timeout exception";
+        break;
+      case NoInternetConnectionException:
+        type = FailureType.noInternetConnection;
+        errorMessage = "No internet connection exception";
+        break;
+      case TooManyRequestsException:
+        type = FailureType.tooManyRequests;
+        errorMessage = "Too many requests exception";
+        break;
+      case BadRequestException:
+        type = FailureType.badRequest;
+        errorMessage = "Bad request exception";
+        break;
+      case PayloadToLargeException:
+        type = FailureType.payloadToLarge;
+        errorMessage = "Payload to large exception";
+        break;
+      case UriTooLongException:
+        type = FailureType.uriToLong;
+        errorMessage = "URI too long exception";
+        break;
+      case OriginUnreachableException:
+        type = FailureType.originUnreachable;
+        errorMessage = "Origin unreachable exception";
+        break;
+      default:
+        type = FailureType.unknown;
+        errorMessage = "Unknown error";
     }
 
-    return const Failure(
-        type: FailureType.unknown, errorMessage: "Unknown error");
+    return Failure(type: type, errorMessage: errorMessage);
   }
 
   @override
