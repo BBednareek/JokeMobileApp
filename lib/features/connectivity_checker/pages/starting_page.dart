@@ -7,7 +7,7 @@ class StartingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: onAvailableConnection()),
+      body: SafeArea(child: onAvailableConnection(context)),
     );
   }
 }

@@ -26,10 +26,38 @@ ThemeData darkTheme = ThemeData(
           elevation: 0,
           shadowColor: ProjectColors.transparent)),
   textTheme: const TextTheme(
+    /// [48PX, BOLD]
+    bodyLarge: TextStyle(
+      fontSize: 48,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [24PX, BOLD]
+    bodyMedium: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [16PX, BOLD]
+    bodySmall: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [24PX NORMAL]
+    displayLarge: TextStyle(
+      fontSize: 24,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [16PX NORMAL]
     displayMedium: TextStyle(
-        fontFamily: 'Poppins', fontSize: 12, color: ProjectColors.darkTxt),
-    titleLarge: TextStyle(
-        fontFamily: 'Poppins', fontSize: 32, color: ProjectColors.darkTxt),
+      fontSize: 16,
+      fontFamily: 'Poppins',
+    ),
   ),
 );
 
@@ -57,7 +85,37 @@ ThemeData lightTheme = ThemeData(
           elevation: 0,
           shadowColor: ProjectColors.transparent)),
   textTheme: const TextTheme(
+    /// [48PX, BOLD]
+    bodyLarge: TextStyle(
+      fontSize: 48,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [24PX, BOLD]
+    bodyMedium: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [16PX, BOLD]
+    bodySmall: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [24PX NORMAL]
+    displayLarge: TextStyle(
+      fontSize: 24,
+      fontFamily: 'Poppins',
+    ),
+
+    /// [16PX NORMAL]
     displayMedium: TextStyle(
-        fontFamily: 'Poppins', fontSize: 12, color: ProjectColors.lightTxt),
+      fontSize: 16,
+      fontFamily: 'Poppins',
+    ),
   ),
 );
