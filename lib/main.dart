@@ -2,6 +2,7 @@ import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:joke_app/core/bloc_observer.dart';
 import 'package:joke_app/core/constants/paths.dart';
@@ -42,20 +43,26 @@ class MyApp extends StatelessWidget {
               ..add(const ConnectivityCheckerEvent.internetConnectionChecker()),
           ),
         ],
-        child: BlocBuilder<ConnectivityCheckerBloc, ConnectivityCheckerState>(
-          builder: (context, connectivityState) {
-            return BlocBuilder<ThemeCubit, ThemeEntity>(
-              builder: (context, themeState) {
-                return MaterialApp.router(
-                  debugShowCheckedModeBanner: false,
-                  routerConfig: routerConfig(
-                      observers: [ChuckerFlutter.navigatorObserver]),
-                  title: 'Joke generator application',
-                  theme: lightTheme,
-                  darkTheme: darkTheme,
-                  themeMode: themeState.theme,
-                );
+        child: BlocBuilder<ThemeCubit, ThemeEntity>(
+          builder: (context, themeState) {
+            return BlocListener<ConnectivityCheckerBloc,
+                ConnectivityCheckerState>(
+              listener: (context, connectionState) {
+                router.refresh();
+                if (connectionState.checkingConnection) {
+                  Navigator.of(context).pop();
+                  context.push(Pathes.loading);
+                }
               },
+              child: MaterialApp.router(
+                debugShowCheckedModeBanner: false,
+                routerConfig:
+                    routerConfig(observers: [ChuckerFlutter.navigatorObserver]),
+                title: 'Joke generator application',
+                theme: lightTheme,
+                darkTheme: darkTheme,
+                themeMode: themeState.theme,
+              ),
             );
           },
         ),
