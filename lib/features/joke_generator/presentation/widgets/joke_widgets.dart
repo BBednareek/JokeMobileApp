@@ -4,12 +4,21 @@ import 'package:joke_app/core/constants/query_params.dart';
 import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 Widget header() {
-  return const Column(
-    children: [
-      Text("Joke generator"),
-      SizedBox(height: 5),
-      Text("Please, provide us with informations about joke you want to read")
-    ],
+  return const Padding(
+    padding: EdgeInsets.all(8.0),
+    child: Column(
+      children: [
+        Text(
+          "Joke generator",
+          style: TextStyle(fontSize: 20, fontFamily: 'Poppins'),
+        ),
+        SizedBox(height: 5),
+        Text(
+          "Please, provide us with informations about joke you want to read",
+          style: TextStyle(fontSize: 16, fontFamily: 'Poppins'),
+        ),
+      ],
+    ),
   );
 }
 
