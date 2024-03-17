@@ -10,4 +10,8 @@ Widget onAvailableConnection() {
   ]);
 }
 
-onNotAvailableConnection() {}
+onNotAvailableConnection() {
+  return const Column(
+    children: [Text("NO CONNECTION")],
+  );
+}
