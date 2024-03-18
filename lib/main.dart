@@ -16,9 +16,8 @@ import 'package:path_provider/path_provider.dart';
 //TODO Create throwableFailure
 //TODO Create favourtie screen
 //TODO Create generated joke screen
-//TODO Create const Paddings etc...
 //TODO Create api route generator
-//TODO Add title of tile form radio/checkbox select to list
+//TODO Add title of tile from radio/checkbox select to list
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -6,11 +6,11 @@ part 'joke_flags_entity.g.dart';
 @freezed
 class JokeFlagsEntity with _$JokeFlagsEntity {
   const factory JokeFlagsEntity({
-    required String nsfw,
-    required String religious,
-    required String political,
-    required String sexist,
-    required String explicit,
+    required bool nsfw,
+    required bool religious,
+    required bool political,
+    required bool sexist,
+    required bool explicit,
   }) = _JokeFlagsEntity;
 
   factory JokeFlagsEntity.fromJson(Map<String, dynamic> json) =>

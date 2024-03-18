@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:joke_app/core/constants/paddings.dart';
+import 'package:joke_app/features/joke_generator/presentation/bloc/joke_bloc.dart';
 import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 Widget header() {
   return const Padding(
-    padding: EdgeInsets.all(8.0),
+    padding: Paddings.all8,
     child: Column(
       children: [
         Text(
@@ -59,5 +61,45 @@ Widget chooseCategories() {
       //   },
       // ),
     ],
+  );
+}
+
+Widget generatedJoke() {
+  return BlocBuilder<JokeBloc, JokeState>(
+    builder: (context, state) {
+      return Column(
+        children: [
+          state.jokeEntity!.type == 'single'
+              ? const SizedBox.shrink()
+              : const SizedBox.shrink(),
+        ],
+      );
+    },
+  );
+}
+
+Widget singlePartJoke() {
+  return BlocBuilder<JokeBloc, JokeState>(
+    builder: (context, state) {
+      return Column(
+        children: [
+          Text(state.jokeEntity!.joke!),
+        ],
+      );
+    },
+  );
+}
+
+Widget doublePartJoke() {
+  return BlocBuilder<JokeBloc, JokeState>(
+    builder: (context, state) {
+      return Column(
+        children: [
+          Text(state.jokeEntity!.setup!),
+          const SizedBox(height: 10),
+          Text(state.jokeEntity!.delivery!),
+        ],
+      );
+    },
   );
 }

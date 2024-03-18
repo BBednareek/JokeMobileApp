@@ -20,11 +20,11 @@ JokeFlagsEntity _$JokeFlagsEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$JokeFlagsEntity {
-  String get nsfw => throw _privateConstructorUsedError;
-  String get religious => throw _privateConstructorUsedError;
-  String get political => throw _privateConstructorUsedError;
-  String get sexist => throw _privateConstructorUsedError;
-  String get explicit => throw _privateConstructorUsedError;
+  bool get nsfw => throw _privateConstructorUsedError;
+  bool get religious => throw _privateConstructorUsedError;
+  bool get political => throw _privateConstructorUsedError;
+  bool get sexist => throw _privateConstructorUsedError;
+  bool get explicit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,11 +39,7 @@ abstract class $JokeFlagsEntityCopyWith<$Res> {
       _$JokeFlagsEntityCopyWithImpl<$Res, JokeFlagsEntity>;
   @useResult
   $Res call(
-      {String nsfw,
-      String religious,
-      String political,
-      String sexist,
-      String explicit});
+      {bool nsfw, bool religious, bool political, bool sexist, bool explicit});
 }
 
 /// @nodoc
@@ -69,23 +65,23 @@ class _$JokeFlagsEntityCopyWithImpl<$Res, $Val extends JokeFlagsEntity>
       nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       religious: null == religious
           ? _value.religious
           : religious // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       political: null == political
           ? _value.political
           : political // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       sexist: null == sexist
           ? _value.sexist
           : sexist // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       explicit: null == explicit
           ? _value.explicit
           : explicit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
     ) as $Val);
   }
 }
@@ -99,11 +95,7 @@ abstract class _$$JokeFlagsEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String nsfw,
-      String religious,
-      String political,
-      String sexist,
-      String explicit});
+      {bool nsfw, bool religious, bool political, bool sexist, bool explicit});
 }
 
 /// @nodoc
@@ -127,23 +119,23 @@ class __$$JokeFlagsEntityImplCopyWithImpl<$Res>
       nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       religious: null == religious
           ? _value.religious
           : religious // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       political: null == political
           ? _value.political
           : political // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       sexist: null == sexist
           ? _value.sexist
           : sexist // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
       explicit: null == explicit
           ? _value.explicit
           : explicit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as bool,
     ));
   }
 }
@@ -162,15 +154,15 @@ class _$JokeFlagsEntityImpl implements _JokeFlagsEntity {
       _$$JokeFlagsEntityImplFromJson(json);
 
   @override
-  final String nsfw;
+  final bool nsfw;
   @override
-  final String religious;
+  final bool religious;
   @override
-  final String political;
+  final bool political;
   @override
-  final String sexist;
+  final bool sexist;
   @override
-  final String explicit;
+  final bool explicit;
 
   @override
   String toString() {
@@ -214,25 +206,25 @@ class _$JokeFlagsEntityImpl implements _JokeFlagsEntity {
 
 abstract class _JokeFlagsEntity implements JokeFlagsEntity {
   const factory _JokeFlagsEntity(
-      {required final String nsfw,
-      required final String religious,
-      required final String political,
-      required final String sexist,
-      required final String explicit}) = _$JokeFlagsEntityImpl;
+      {required final bool nsfw,
+      required final bool religious,
+      required final bool political,
+      required final bool sexist,
+      required final bool explicit}) = _$JokeFlagsEntityImpl;
 
   factory _JokeFlagsEntity.fromJson(Map<String, dynamic> json) =
       _$JokeFlagsEntityImpl.fromJson;
 
   @override
-  String get nsfw;
+  bool get nsfw;
   @override
-  String get religious;
+  bool get religious;
   @override
-  String get political;
+  bool get political;
   @override
-  String get sexist;
+  bool get sexist;
   @override
-  String get explicit;
+  bool get explicit;
   @override
   @JsonKey(ignore: true)
   _$$JokeFlagsEntityImplCopyWith<_$JokeFlagsEntityImpl> get copyWith =>

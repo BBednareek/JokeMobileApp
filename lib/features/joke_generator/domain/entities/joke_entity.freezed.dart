@@ -23,8 +23,9 @@ mixin _$JokeEntity {
   String get error => throw _privateConstructorUsedError;
   String get category => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
-  String get setup => throw _privateConstructorUsedError;
-  String get delivery => throw _privateConstructorUsedError;
+  String? get setup => throw _privateConstructorUsedError;
+  String? get joke => throw _privateConstructorUsedError;
+  String? get delivery => throw _privateConstructorUsedError;
   JokeFlagsEntity get flags => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   bool get safe => throw _privateConstructorUsedError;
@@ -46,8 +47,9 @@ abstract class $JokeEntityCopyWith<$Res> {
       {String error,
       String category,
       String type,
-      String setup,
-      String delivery,
+      String? setup,
+      String? joke,
+      String? delivery,
       JokeFlagsEntity flags,
       int id,
       bool safe,
@@ -72,8 +74,9 @@ class _$JokeEntityCopyWithImpl<$Res, $Val extends JokeEntity>
     Object? error = null,
     Object? category = null,
     Object? type = null,
-    Object? setup = null,
-    Object? delivery = null,
+    Object? setup = freezed,
+    Object? joke = freezed,
+    Object? delivery = freezed,
     Object? flags = null,
     Object? id = null,
     Object? safe = null,
@@ -92,14 +95,18 @@ class _$JokeEntityCopyWithImpl<$Res, $Val extends JokeEntity>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      setup: null == setup
+      setup: freezed == setup
           ? _value.setup
           : setup // ignore: cast_nullable_to_non_nullable
-              as String,
-      delivery: null == delivery
+              as String?,
+      joke: freezed == joke
+          ? _value.joke
+          : joke // ignore: cast_nullable_to_non_nullable
+              as String?,
+      delivery: freezed == delivery
           ? _value.delivery
           : delivery // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       flags: null == flags
           ? _value.flags
           : flags // ignore: cast_nullable_to_non_nullable
@@ -140,8 +147,9 @@ abstract class _$$JokeEntityImplCopyWith<$Res>
       {String error,
       String category,
       String type,
-      String setup,
-      String delivery,
+      String? setup,
+      String? joke,
+      String? delivery,
       JokeFlagsEntity flags,
       int id,
       bool safe,
@@ -165,8 +173,9 @@ class __$$JokeEntityImplCopyWithImpl<$Res>
     Object? error = null,
     Object? category = null,
     Object? type = null,
-    Object? setup = null,
-    Object? delivery = null,
+    Object? setup = freezed,
+    Object? joke = freezed,
+    Object? delivery = freezed,
     Object? flags = null,
     Object? id = null,
     Object? safe = null,
@@ -185,14 +194,18 @@ class __$$JokeEntityImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      setup: null == setup
+      setup: freezed == setup
           ? _value.setup
           : setup // ignore: cast_nullable_to_non_nullable
-              as String,
-      delivery: null == delivery
+              as String?,
+      joke: freezed == joke
+          ? _value.joke
+          : joke // ignore: cast_nullable_to_non_nullable
+              as String?,
+      delivery: freezed == delivery
           ? _value.delivery
           : delivery // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       flags: null == flags
           ? _value.flags
           : flags // ignore: cast_nullable_to_non_nullable
@@ -220,8 +233,9 @@ class _$JokeEntityImpl implements _JokeEntity {
       {required this.error,
       required this.category,
       required this.type,
-      required this.setup,
-      required this.delivery,
+      this.setup,
+      this.joke,
+      this.delivery,
       required this.flags,
       required this.id,
       required this.safe,
@@ -237,9 +251,11 @@ class _$JokeEntityImpl implements _JokeEntity {
   @override
   final String type;
   @override
-  final String setup;
+  final String? setup;
   @override
-  final String delivery;
+  final String? joke;
+  @override
+  final String? delivery;
   @override
   final JokeFlagsEntity flags;
   @override
@@ -251,7 +267,7 @@ class _$JokeEntityImpl implements _JokeEntity {
 
   @override
   String toString() {
-    return 'JokeEntity(error: $error, category: $category, type: $type, setup: $setup, delivery: $delivery, flags: $flags, id: $id, safe: $safe, lang: $lang)';
+    return 'JokeEntity(error: $error, category: $category, type: $type, setup: $setup, joke: $joke, delivery: $delivery, flags: $flags, id: $id, safe: $safe, lang: $lang)';
   }
 
   @override
@@ -264,6 +280,7 @@ class _$JokeEntityImpl implements _JokeEntity {
                 other.category == category) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.setup, setup) || other.setup == setup) &&
+            (identical(other.joke, joke) || other.joke == joke) &&
             (identical(other.delivery, delivery) ||
                 other.delivery == delivery) &&
             (identical(other.flags, flags) || other.flags == flags) &&
@@ -275,7 +292,7 @@ class _$JokeEntityImpl implements _JokeEntity {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, error, category, type, setup,
-      delivery, flags, id, safe, lang);
+      joke, delivery, flags, id, safe, lang);
 
   @JsonKey(ignore: true)
   @override
@@ -296,8 +313,9 @@ abstract class _JokeEntity implements JokeEntity {
       {required final String error,
       required final String category,
       required final String type,
-      required final String setup,
-      required final String delivery,
+      final String? setup,
+      final String? joke,
+      final String? delivery,
       required final JokeFlagsEntity flags,
       required final int id,
       required final bool safe,
@@ -313,9 +331,11 @@ abstract class _JokeEntity implements JokeEntity {
   @override
   String get type;
   @override
-  String get setup;
+  String? get setup;
   @override
-  String get delivery;
+  String? get joke;
+  @override
+  String? get delivery;
   @override
   JokeFlagsEntity get flags;
   @override

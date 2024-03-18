@@ -9,11 +9,11 @@ part of 'joke_flags_entity.dart';
 _$JokeFlagsEntityImpl _$$JokeFlagsEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$JokeFlagsEntityImpl(
-      nsfw: json['nsfw'] as String,
-      religious: json['religious'] as String,
-      political: json['political'] as String,
-      sexist: json['sexist'] as String,
-      explicit: json['explicit'] as String,
+      nsfw: json['nsfw'] as bool,
+      religious: json['religious'] as bool,
+      political: json['political'] as bool,
+      sexist: json['sexist'] as bool,
+      explicit: json['explicit'] as bool,
     );
 
 Map<String, dynamic> _$$JokeFlagsEntityImplToJson(
