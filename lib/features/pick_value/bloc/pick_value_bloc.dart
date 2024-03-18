@@ -1,10 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'pick_value_bloc.freezed.dart';
 part 'pick_value_event.dart';
 part 'pick_value_state.dart';
 
+@lazySingleton
 class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
   PickValueBloc() : super(const PickValueState()) {
     on<_ChangeRadioRequested>(_onChangeRadioRequested);

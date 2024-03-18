@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:joke_app/core/constants/paths.dart';
+import 'package:joke_app/core/constants/pathes.dart';
 import 'package:joke_app/core/factories/dio_factory.dart';
 import 'package:joke_app/features/joke_generator/domain/entities/joke_entity.dart';
 

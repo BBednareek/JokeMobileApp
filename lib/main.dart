@@ -4,18 +4,17 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:joke_app/core/bloc_observer.dart';
-import 'package:joke_app/core/constants/paths.dart';
+import 'package:joke_app/core/constants/pathes.dart';
 import 'package:joke_app/core/di/injectable.dart';
 import 'package:joke_app/core/theme/theme.dart';
 import 'package:joke_app/features/connectivity_checker/bloc/connectivity_checker_bloc.dart';
+import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 import 'package:joke_app/features/theme_cubit/domain/entities/theme_entity.dart';
 import 'package:joke_app/features/theme_cubit/presentation/theme_cubit.dart';
 import 'package:path_provider/path_provider.dart';
 
-//TODO Create pick screen
 //TODO Create throwableFailure
 //TODO Create favourtie screen
-//TODO Create generated joke screen
 //TODO Create api route generator
 //TODO Add title of tile from radio/checkbox select to list
 
@@ -32,7 +31,9 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(BlocProvider(
-      create: (_) => locator<ConnectivityCheckerBloc>(), child: const MyApp()));
+      create: (_) => locator<ConnectivityCheckerBloc>()
+        ..add(const ConnectivityCheckerEvent.internetConnectionChecker()),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -45,10 +46,7 @@ class MyApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => locator<ThemeCubit>()),
-          BlocProvider(
-            create: (context) => ConnectivityCheckerBloc()
-              ..add(const ConnectivityCheckerEvent.internetConnectionChecker()),
-          ),
+          BlocProvider(create: (context) => locator<PickValueBloc>())
         ],
         child: BlocBuilder<ThemeCubit, ThemeEntity>(
           builder: (context, themeState) {
@@ -56,7 +54,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               routerConfig:
                   routerConfig(observers: [ChuckerFlutter.navigatorObserver]),
-              title: 'Joke generator application',
+              title: 'Joke Generator App',
               theme: lightTheme,
               darkTheme: darkTheme,
               themeMode: themeState.theme,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-ButtonStyle startingPageButton(BuildContext context) =>
-    ElevatedButton.styleFrom(
+ButtonStyle pageButton(BuildContext context) => ElevatedButton.styleFrom(
       minimumSize: const Size(double.minPositive, double.minPositive),
       backgroundColor: Theme.of(context).colorScheme.secondary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),

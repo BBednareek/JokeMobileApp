@@ -7,6 +7,9 @@ import 'package:joke_app/features/connectivity_checker/pages/starting_page.dart'
 import 'package:joke_app/features/connectivity_checker/pages/unconnected_page.dart';
 import 'package:joke_app/features/joke_generator/presentation/pages/generated_joke.dart';
 import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_categories.dart';
+import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_flags.dart';
+import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_language.dart';
+import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_type.dart';
 
 class Pathes {
   /// [API PATH]
@@ -68,12 +71,15 @@ GoRouter routerConfig({List<NavigatorObserver>? observers}) {
       // GoRoute(path: '/showFavourites', builder: (_, __) => const ),
 
       ///[GENERATOR PATHES]
+
       GoRoute(
           path: '/pickCategories',
-          builder: (_, __) => const PickCategoriesScreen()),
-      // GoRoute(path: '/pickLanguage', builder: (_, __) => const ),
-      // GoRoute(path: '/pickFlags', builder: (_, __) => const ),
-      // GoRoute(path: '/pickType', builder: (_, __) => const ),
+          builder: (_, state) => const PickCategoriesScreen()),
+      GoRoute(
+          path: '/pickLanguage',
+          builder: (_, __) => const PickLanguageScreen()),
+      GoRoute(path: '/pickFlags', builder: (_, __) => const PickFlagsScreen()),
+      GoRoute(path: '/pickType', builder: (_, __) => const PickTypeScreen()),
 
       ///[GENERATED PATH]
       GoRoute(

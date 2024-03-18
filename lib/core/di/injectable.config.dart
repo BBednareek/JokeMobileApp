@@ -18,9 +18,10 @@ import 'package:joke_app/features/joke_generator/data/datasource/joke_datasource
 import 'package:joke_app/features/joke_generator/data/repository/joke_repository.dart'
     as _i6;
 import 'package:joke_app/features/joke_generator/domain/usecases/get_joke.usecase.dart'
-    as _i8;
+    as _i9;
+import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart' as _i7;
 import 'package:joke_app/features/theme_cubit/presentation/theme_cubit.dart'
-    as _i7;
+    as _i8;
 
 extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -40,9 +41,10 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i5.JokeRemoteDatasourceImpl(dioFactory: gh<_i4.DioFactory>()));
     gh.lazySingleton<_i6.JokeRepository>(() => _i6.JokeRepositoryImpl(
         jokeRemoteDatasource: gh<_i5.JokeRemoteDatasource>()));
-    gh.factory<_i7.ThemeCubit>(() => _i7.ThemeCubit());
-    gh.lazySingleton<_i8.GetJokeUsecase>(
-        () => _i8.GetJokeUsecase(jokeRepository: gh<_i6.JokeRepository>()));
+    gh.lazySingleton<_i7.PickValueBloc>(() => _i7.PickValueBloc());
+    gh.factory<_i8.ThemeCubit>(() => _i8.ThemeCubit());
+    gh.lazySingleton<_i9.GetJokeUsecase>(
+        () => _i9.GetJokeUsecase(jokeRepository: gh<_i6.JokeRepository>()));
     return this;
   }
 }

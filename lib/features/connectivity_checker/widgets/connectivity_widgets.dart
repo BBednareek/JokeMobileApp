@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:joke_app/core/constants/paths.dart';
+import 'package:joke_app/core/constants/pathes.dart';
 import 'package:joke_app/core/theme/inherited_widgets.dart';
 
 Widget onAvailableConnection(BuildContext context) {
@@ -19,7 +19,7 @@ Widget onAvailableConnection(BuildContext context) {
         SizedBox(
           width: buttonWidth,
           child: ElevatedButton(
-            style: startingPageButton(context),
+            style: pageButton(context),
             onPressed: () => context.go(Pathes.pickCategories),
             child: Text(
               "Generate new joke",
@@ -31,7 +31,7 @@ Widget onAvailableConnection(BuildContext context) {
         SizedBox(
           width: buttonWidth,
           child: ElevatedButton(
-            style: startingPageButton(context),
+            style: pageButton(context),
             onPressed: () => context.go(Pathes.showFavourites),
             child: Text(
               "Favourite jokes",

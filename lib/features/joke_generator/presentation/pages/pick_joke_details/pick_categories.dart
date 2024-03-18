@@ -8,8 +8,8 @@ class PickCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => PickValueBloc(),
+    return BlocProvider.value(
+      value: context.read<PickValueBloc>(),
       child: const _PickCategoriesScreen(),
     );
   }
