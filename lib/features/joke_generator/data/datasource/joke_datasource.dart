@@ -34,7 +34,6 @@ class JokeRemoteDatasourceImpl implements JokeRemoteDatasource {
           type: type,
         ),
       );
-
       return JokeEntity.fromJson(response.data);
     } catch (e) {
       throw Exception(e.toString());
