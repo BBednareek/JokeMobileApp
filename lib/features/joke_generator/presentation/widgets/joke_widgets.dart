@@ -109,7 +109,7 @@ Widget chooseLanguage() {
             onChanged: (newValue) {
               context
                   .read<PickValueBloc>()
-                  .add(PickValueEvent.changeCheckboxRequested(index));
+                  .add(PickValueEvent.changeRadioRequested(index));
               context
                   .read<PickValueBloc>()
                   .add(PickValueEvent.addStringsToList(languages));
@@ -118,18 +118,6 @@ Widget chooseLanguage() {
         },
       );
     },
-  );
-}
-
-Widget pickValues() {
-  return GridView.count(
-    crossAxisCount: 2,
-    children: [
-      chooseLanguage(),
-      chooseType(),
-      chooseCategories(),
-      chooseFlags(),
-    ],
   );
 }
 

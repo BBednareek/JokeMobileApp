@@ -20,7 +20,7 @@ Widget onAvailableConnection(BuildContext context) {
           width: buttonWidth,
           child: ElevatedButton(
             style: startingPageButton(context),
-            onPressed: () => context.go(Pathes.generateJoke),
+            onPressed: () => context.go(Pathes.pickCategories),
             child: Text(
               "Generate new joke",
               style: Theme.of(context).textTheme.displayMedium,
