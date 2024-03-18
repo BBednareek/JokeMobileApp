@@ -167,10 +167,6 @@ abstract class _GetJoke implements JokeEvent {
 mixin _$JokeState {
   JokeEntity? get jokeEntity => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
-  String get categories => throw _privateConstructorUsedError;
-  String get flags => throw _privateConstructorUsedError;
-  String get langauge => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $JokeStateCopyWith<JokeState> get copyWith =>
@@ -182,13 +178,7 @@ abstract class $JokeStateCopyWith<$Res> {
   factory $JokeStateCopyWith(JokeState value, $Res Function(JokeState) then) =
       _$JokeStateCopyWithImpl<$Res, JokeState>;
   @useResult
-  $Res call(
-      {JokeEntity? jokeEntity,
-      String errorMessage,
-      String categories,
-      String flags,
-      String langauge,
-      String type});
+  $Res call({JokeEntity? jokeEntity, String errorMessage});
 
   $JokeEntityCopyWith<$Res>? get jokeEntity;
 }
@@ -208,10 +198,6 @@ class _$JokeStateCopyWithImpl<$Res, $Val extends JokeState>
   $Res call({
     Object? jokeEntity = freezed,
     Object? errorMessage = null,
-    Object? categories = null,
-    Object? flags = null,
-    Object? langauge = null,
-    Object? type = null,
   }) {
     return _then(_value.copyWith(
       jokeEntity: freezed == jokeEntity
@@ -221,22 +207,6 @@ class _$JokeStateCopyWithImpl<$Res, $Val extends JokeState>
       errorMessage: null == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      categories: null == categories
-          ? _value.categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as String,
-      flags: null == flags
-          ? _value.flags
-          : flags // ignore: cast_nullable_to_non_nullable
-              as String,
-      langauge: null == langauge
-          ? _value.langauge
-          : langauge // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -262,13 +232,7 @@ abstract class _$$JokeStateImplCopyWith<$Res>
       __$$JokeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {JokeEntity? jokeEntity,
-      String errorMessage,
-      String categories,
-      String flags,
-      String langauge,
-      String type});
+  $Res call({JokeEntity? jokeEntity, String errorMessage});
 
   @override
   $JokeEntityCopyWith<$Res>? get jokeEntity;
@@ -287,10 +251,6 @@ class __$$JokeStateImplCopyWithImpl<$Res>
   $Res call({
     Object? jokeEntity = freezed,
     Object? errorMessage = null,
-    Object? categories = null,
-    Object? flags = null,
-    Object? langauge = null,
-    Object? type = null,
   }) {
     return _then(_$JokeStateImpl(
       jokeEntity: freezed == jokeEntity
@@ -301,22 +261,6 @@ class __$$JokeStateImplCopyWithImpl<$Res>
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      categories: null == categories
-          ? _value.categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as String,
-      flags: null == flags
-          ? _value.flags
-          : flags // ignore: cast_nullable_to_non_nullable
-              as String,
-      langauge: null == langauge
-          ? _value.langauge
-          : langauge // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -324,35 +268,17 @@ class __$$JokeStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$JokeStateImpl implements _JokeState {
-  const _$JokeStateImpl(
-      {this.jokeEntity,
-      this.errorMessage = '',
-      this.categories = 'ANY',
-      this.flags = '',
-      this.langauge = '',
-      this.type = ''});
+  const _$JokeStateImpl({this.jokeEntity, this.errorMessage = ''});
 
   @override
   final JokeEntity? jokeEntity;
   @override
   @JsonKey()
   final String errorMessage;
-  @override
-  @JsonKey()
-  final String categories;
-  @override
-  @JsonKey()
-  final String flags;
-  @override
-  @JsonKey()
-  final String langauge;
-  @override
-  @JsonKey()
-  final String type;
 
   @override
   String toString() {
-    return 'JokeState(jokeEntity: $jokeEntity, errorMessage: $errorMessage, categories: $categories, flags: $flags, langauge: $langauge, type: $type)';
+    return 'JokeState(jokeEntity: $jokeEntity, errorMessage: $errorMessage)';
   }
 
   @override
@@ -363,18 +289,11 @@ class _$JokeStateImpl implements _JokeState {
             (identical(other.jokeEntity, jokeEntity) ||
                 other.jokeEntity == jokeEntity) &&
             (identical(other.errorMessage, errorMessage) ||
-                other.errorMessage == errorMessage) &&
-            (identical(other.categories, categories) ||
-                other.categories == categories) &&
-            (identical(other.flags, flags) || other.flags == flags) &&
-            (identical(other.langauge, langauge) ||
-                other.langauge == langauge) &&
-            (identical(other.type, type) || other.type == type));
+                other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, jokeEntity, errorMessage, categories, flags, langauge, type);
+  int get hashCode => Object.hash(runtimeType, jokeEntity, errorMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -386,24 +305,12 @@ class _$JokeStateImpl implements _JokeState {
 abstract class _JokeState implements JokeState {
   const factory _JokeState(
       {final JokeEntity? jokeEntity,
-      final String errorMessage,
-      final String categories,
-      final String flags,
-      final String langauge,
-      final String type}) = _$JokeStateImpl;
+      final String errorMessage}) = _$JokeStateImpl;
 
   @override
   JokeEntity? get jokeEntity;
   @override
   String get errorMessage;
-  @override
-  String get categories;
-  @override
-  String get flags;
-  @override
-  String get langauge;
-  @override
-  String get type;
   @override
   @JsonKey(ignore: true)
   _$$JokeStateImplCopyWith<_$JokeStateImpl> get copyWith =>

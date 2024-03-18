@@ -33,13 +33,31 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
   }
 
   _onAddCategoriesToList(
-      _AddCategoriesToList event, Emitter<PickValueState> emit) async {}
+      _AddCategoriesToList event, Emitter<PickValueState> emit) async {
+    List<String> selectedCategories = event.categories;
 
-  _onAddFlagsToList(
-      _AddFlagsToList event, Emitter<PickValueState> emit) async {}
+    String concatenatedCategories = selectedCategories.join(',');
+
+    emit(state.copyWith(selectedCategories: concatenatedCategories));
+  }
+
+  _onAddFlagsToList(_AddFlagsToList event, Emitter<PickValueState> emit) async {
+    List<String> selectedFlags = event.flags;
+
+    String concatenatedFlags = selectedFlags.join(',');
+    emit(state.copyWith(selectedFlags: concatenatedFlags));
+  }
 
   _onAddLanguageToList(
-      _AddLanguageToList event, Emitter<PickValueState> emit) async {}
+      _AddLanguageToList event, Emitter<PickValueState> emit) async {
+    emit(state.copyWith(selectedLanguage: event.language));
+  }
 
-  _onAddTypeToList(_AddTypeToList event, Emitter<PickValueState> emit) async {}
+  _onAddTypeToList(_AddTypeToList event, Emitter<PickValueState> emit) async {
+    List<String> selectedType = event.type;
+
+    String concatenatedType = selectedType.join(',');
+
+    emit(state.copyWith(selectedType: concatenatedType));
+  }
 }
