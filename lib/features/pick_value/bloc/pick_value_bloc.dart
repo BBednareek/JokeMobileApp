@@ -42,7 +42,7 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
   }
 
   _onAddFlagsToList(_AddFlagsToList event, Emitter<PickValueState> emit) async {
-    List<String> selectedFlags = event.flags;
+    List<String> selectedFlags = List.from(event.flags);
 
     String concatenatedFlags = selectedFlags.join(',');
     emit(state.copyWith(selectedFlags: concatenatedFlags));

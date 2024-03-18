@@ -15,8 +15,6 @@ import 'package:path_provider/path_provider.dart';
 
 //TODO Create throwableFailure
 //TODO Create favourtie screen
-//TODO Create logic for adding titles to strings
-//TODO Add title of tile from radio/checkbox select to list
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

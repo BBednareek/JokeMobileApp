@@ -74,9 +74,23 @@ Widget chooseCategories() {
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
-                    context
-                        .read<PickValueBloc>()
-                        .add(PickValueEvent.addCategoriesToList(categories));
+
+                    Set<int> uniqueCheckboxIndices =
+                        Set.from(state.selectedCheckboxes);
+
+                    uniqueCheckboxIndices.contains(index)
+                        ? uniqueCheckboxIndices.remove(index)
+                        : uniqueCheckboxIndices.add(index);
+
+                    uniqueCheckboxIndices.toList().sort();
+
+                    List<String> checkboxTitles = uniqueCheckboxIndices
+                        .toList()
+                        .map((checkboxIndex) => categories[checkboxIndex])
+                        .toList();
+
+                    context.read<PickValueBloc>().add(
+                        PickValueEvent.addCategoriesToList(checkboxTitles));
                   },
                 );
               },
@@ -146,9 +160,24 @@ Widget chooseFlags() {
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
+
+                    Set<int> uniqueCheckboxIndices =
+                        Set.from(state.selectedCheckboxes);
+
+                    uniqueCheckboxIndices.contains(index)
+                        ? uniqueCheckboxIndices.remove(index)
+                        : uniqueCheckboxIndices.add(index);
+
+                    uniqueCheckboxIndices.toList().sort();
+
+                    List<String> checkboxTitles = uniqueCheckboxIndices
+                        .toList()
+                        .map((checkboxIndex) => flags[checkboxIndex])
+                        .toList();
+
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.addFlagsToList(flags));
+                        .add(PickValueEvent.addFlagsToList(checkboxTitles));
                   },
                 );
               },
@@ -218,9 +247,24 @@ Widget chooseType() {
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
+
+                    Set<int> uniqueCheckboxIndices =
+                        Set.from(state.selectedCheckboxes);
+
+                    uniqueCheckboxIndices.contains(index)
+                        ? uniqueCheckboxIndices.remove(index)
+                        : uniqueCheckboxIndices.add(index);
+
+                    uniqueCheckboxIndices.toList().sort();
+
+                    List<String> checkboxTitles = uniqueCheckboxIndices
+                        .toList()
+                        .map((checkboxIndex) => types[checkboxIndex])
+                        .toList();
+
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.addTypeTolist(types));
+                        .add(PickValueEvent.addTypeTolist(checkboxTitles));
                   },
                 );
               },

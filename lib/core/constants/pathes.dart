@@ -16,13 +16,13 @@ class Pathes {
   /// [API PATH]
   static String jokeUrl({
     String categories = 'Any',
-    String language = '',
+    String language = 'en',
     String flags = '',
     String type = '',
   }) {
     String url = 'https://v2.jokeapi.dev/joke/$categories';
 
-    if (language.isNotEmpty) {
+    if (language.isNotEmpty && language != 'en') {
       url += '?lang=$language';
     }
 
