@@ -55,6 +55,7 @@ Widget chooseCategories() {
             ],
           ),
           RadioListTile(
+            controlAffinity: ListTileControlAffinity.trailing,
             value: state.selectedOption,
             groupValue: state.selectedOption,
             title: const Text("ANY"),
@@ -126,6 +127,7 @@ Widget chooseFlags() {
             ],
           ),
           RadioListTile(
+            controlAffinity: ListTileControlAffinity.trailing,
             value: state.selectedOption,
             groupValue: state.selectedOption,
             title: const Text("NONE"),
@@ -197,6 +199,7 @@ Widget chooseType() {
             ],
           ),
           RadioListTile(
+            controlAffinity: ListTileControlAffinity.trailing,
             value: state.selectedOption,
             groupValue: state.selectedOption,
             title: const Text("ANY"),
@@ -267,25 +270,19 @@ Widget chooseLanguage() {
               ),
             ],
           ),
-          RadioListTile(
-            value: state.selectedOption,
-            groupValue: state.selectedOption,
-            title: const Text("ANY"),
-            onChanged: (newValue) => context
-                .read<PickValueBloc>()
-                .add(const PickValueEvent.changeRadioRequested(0)),
-          ),
           Expanded(
             child: ListView.builder(
               itemCount: languages.length,
               itemBuilder: (context, index) {
-                return CheckboxListTile(
+                return RadioListTile(
+                  controlAffinity: ListTileControlAffinity.trailing,
+                  groupValue: index,
                   value: state.selectedCheckboxes.contains(index),
                   title: Text(languages[index]),
                   onChanged: (newValue) {
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.changeCheckboxRequested(index));
+                        .add(PickValueEvent.changeRadioRequested(index));
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.addStringsToList(languages));
