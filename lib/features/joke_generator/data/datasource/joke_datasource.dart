@@ -26,8 +26,14 @@ class JokeRemoteDatasourceImpl implements JokeRemoteDatasource {
     String type,
   ) async {
     try {
-      final response = await dioFactory.dio
-          .get(Pathes.jokeUrl(categories, language, flags, type));
+      final response = await dioFactory.dio.get(
+        Pathes.jokeUrl(
+          categories: categories,
+          language: language,
+          flags: flags,
+          type: type,
+        ),
+      );
 
       return JokeEntity.fromJson(response.data);
     } catch (e) {

@@ -14,16 +14,28 @@ import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 class Pathes {
   /// [API PATH]
-  static String jokeUrl(
-    String categories,
-    String language,
-    String flags,
-    String type,
-  ) =>
-      'https://v2.jokeapi.dev/joke/$categories'
-      '?lang=$language'
-      '&blacklistFlags=$flags'
-      '&type$type';
+  static String jokeUrl({
+    String categories = 'Any',
+    String language = '',
+    String flags = '',
+    String type = '',
+  }) {
+    String url = 'https://v2.jokeapi.dev/joke/$categories';
+
+    if (language.isNotEmpty) {
+      url += '?lang=$language';
+    }
+
+    if (flags.isNotEmpty) {
+      url += '&blacklistFlags=$flags';
+    }
+
+    if (type.isNotEmpty) {
+      url += '&type=$type';
+    }
+
+    return url;
+  }
 
   /// [GO_ROUTER PATHES]
   /// [CONNECTION PATHES]
