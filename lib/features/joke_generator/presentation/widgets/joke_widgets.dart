@@ -26,6 +26,7 @@ Widget header() {
 Widget chooseCategories() {
   return Column(
     children: [
+      header(),
       BlocBuilder<PickValueBloc, PickValueState>(
         builder: (context, state) {
           return RadioListTile(
@@ -70,8 +71,8 @@ Widget generatedJoke() {
       return Column(
         children: [
           state.jokeEntity!.type == 'single'
-              ? const SizedBox.shrink()
-              : const SizedBox.shrink(),
+              ? singlePartJoke()
+              : doublePartJoke(),
         ],
       );
     },

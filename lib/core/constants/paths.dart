@@ -3,6 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:joke_app/features/connectivity_checker/bloc/connectivity_checker_bloc.dart';
 import 'package:joke_app/features/connectivity_checker/pages/internet_checker_page.dart';
+import 'package:joke_app/features/connectivity_checker/pages/starting_page.dart';
+import 'package:joke_app/features/connectivity_checker/pages/unconnected_page.dart';
+import 'package:joke_app/features/joke_generator/presentation/pages/generated_joke.dart';
+import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details.dart';
 
 class Pathes {
   /// [API ROUTE]
@@ -20,9 +24,10 @@ class Pathes {
   /// [GO_ROUTER PATHES]
   static const loading = '/loading';
   static const start = '/start';
-  static const noConnection = '/noConnection';
-  static const getJoke = '/getJoke';
   static const showFavourites = '/showFavourites';
+  static const generateJoke = '/generateJoke';
+  static const getJoke = '/getJoke';
+  static const noConnection = '/noConnection';
 }
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -48,6 +53,14 @@ GoRouter routerConfig({List<NavigatorObserver>? observers}) {
           return null;
         },
       ),
+      GoRoute(path: '/start', builder: (_, __) => const StartingPage()),
+      // GoRoute(path: '/showFavourites', builder: (_, __) => const ),
+      GoRoute(
+          path: '/generateJoke', builder: (_, __) => const PickJokeScreen()),
+      GoRoute(
+          path: '/getJoke', builder: (_, __) => const GeneratedJokeScreen()),
+      GoRoute(
+          path: '/noConnection', builder: (_, __) => const UnconnectedPage()),
     ],
   );
 
