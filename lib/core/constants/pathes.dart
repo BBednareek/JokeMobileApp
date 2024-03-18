@@ -10,6 +10,7 @@ import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_de
 import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_flags.dart';
 import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_language.dart';
 import 'package:joke_app/features/joke_generator/presentation/pages/pick_joke_details/pick_type.dart';
+import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 class Pathes {
   /// [API PATH]
@@ -74,7 +75,7 @@ GoRouter routerConfig({List<NavigatorObserver>? observers}) {
 
       GoRoute(
           path: '/pickCategories',
-          builder: (_, state) => const PickCategoriesScreen()),
+          builder: (_, __) => const PickCategoriesScreen()),
       GoRoute(
           path: '/pickLanguage',
           builder: (_, __) => const PickLanguageScreen()),
@@ -83,7 +84,10 @@ GoRouter routerConfig({List<NavigatorObserver>? observers}) {
 
       ///[GENERATED PATH]
       GoRoute(
-          path: '/getJoke', builder: (_, __) => const GeneratedJokeScreen()),
+          path: '/getJoke',
+          builder: (_, __) => GeneratedJokeScreen(
+                pickValueBloc: _.read<PickValueBloc>(),
+              )),
     ],
   );
 

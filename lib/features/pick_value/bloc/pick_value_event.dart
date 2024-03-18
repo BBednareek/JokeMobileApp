@@ -6,6 +6,12 @@ abstract class PickValueEvent with _$PickValueEvent {
       _ChangeRadioRequested;
   const factory PickValueEvent.changeCheckboxRequested(int checkboxIndex) =
       _ChangeCheckboxRequested;
-  const factory PickValueEvent.addStringsToList(List<String> strings) =
-      _AddStringsToList;
+  const factory PickValueEvent.addCategoriesToList(List<String> categories) =
+      _AddCategoriesToList;
+  const factory PickValueEvent.addLanguageToList(String language) =
+      _AddLanguageToList;
+  const factory PickValueEvent.addFlagsToList(List<String> flags) =
+      _AddFlagsToList;
+  const factory PickValueEvent.addTypeTolist(List<String> type) =
+      _AddTypeToList;
 }

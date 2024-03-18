@@ -16,6 +16,7 @@ import 'package:path_provider/path_provider.dart';
 //TODO Create throwableFailure
 //TODO Create favourtie screen
 //TODO Create api route generator
+//TODO Change pickvaluebloc states/events to handle every screen
 //TODO Add title of tile from radio/checkbox select to list
 
 Future<void> main() async {

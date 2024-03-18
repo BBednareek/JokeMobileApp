@@ -20,21 +20,30 @@ mixin _$PickValueEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(int radioIndex) changeRadioRequested,
     required TResult Function(int checkboxIndex) changeCheckboxRequested,
-    required TResult Function(List<String> strings) addStringsToList,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int radioIndex)? changeRadioRequested,
     TResult? Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult? Function(List<String> strings)? addStringsToList,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int radioIndex)? changeRadioRequested,
     TResult Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult Function(List<String> strings)? addStringsToList,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,21 +52,30 @@ mixin _$PickValueEvent {
     required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
     required TResult Function(_ChangeCheckboxRequested value)
         changeCheckboxRequested,
-    required TResult Function(_AddStringsToList value) addStringsToList,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult? Function(_AddStringsToList value)? addStringsToList,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult Function(_AddStringsToList value)? addStringsToList,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -150,7 +168,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
   TResult when<TResult extends Object?>({
     required TResult Function(int radioIndex) changeRadioRequested,
     required TResult Function(int checkboxIndex) changeCheckboxRequested,
-    required TResult Function(List<String> strings) addStringsToList,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
   }) {
     return changeRadioRequested(radioIndex);
   }
@@ -160,7 +181,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int radioIndex)? changeRadioRequested,
     TResult? Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult? Function(List<String> strings)? addStringsToList,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
   }) {
     return changeRadioRequested?.call(radioIndex);
   }
@@ -170,7 +194,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int radioIndex)? changeRadioRequested,
     TResult Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult Function(List<String> strings)? addStringsToList,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
     required TResult orElse(),
   }) {
     if (changeRadioRequested != null) {
@@ -185,7 +212,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
     required TResult Function(_ChangeCheckboxRequested value)
         changeCheckboxRequested,
-    required TResult Function(_AddStringsToList value) addStringsToList,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
   }) {
     return changeRadioRequested(this);
   }
@@ -195,7 +225,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult? Function(_AddStringsToList value)? addStringsToList,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
   }) {
     return changeRadioRequested?.call(this);
   }
@@ -205,7 +238,10 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult Function(_AddStringsToList value)? addStringsToList,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
     required TResult orElse(),
   }) {
     if (changeRadioRequested != null) {
@@ -295,7 +331,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
   TResult when<TResult extends Object?>({
     required TResult Function(int radioIndex) changeRadioRequested,
     required TResult Function(int checkboxIndex) changeCheckboxRequested,
-    required TResult Function(List<String> strings) addStringsToList,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
   }) {
     return changeCheckboxRequested(checkboxIndex);
   }
@@ -305,7 +344,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int radioIndex)? changeRadioRequested,
     TResult? Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult? Function(List<String> strings)? addStringsToList,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
   }) {
     return changeCheckboxRequested?.call(checkboxIndex);
   }
@@ -315,7 +357,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int radioIndex)? changeRadioRequested,
     TResult Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult Function(List<String> strings)? addStringsToList,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
     required TResult orElse(),
   }) {
     if (changeCheckboxRequested != null) {
@@ -330,7 +375,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
     required TResult Function(_ChangeCheckboxRequested value)
         changeCheckboxRequested,
-    required TResult Function(_AddStringsToList value) addStringsToList,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
   }) {
     return changeCheckboxRequested(this);
   }
@@ -340,7 +388,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult? Function(_AddStringsToList value)? addStringsToList,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
   }) {
     return changeCheckboxRequested?.call(this);
   }
@@ -350,7 +401,10 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult Function(_AddStringsToList value)? addStringsToList,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
     required TResult orElse(),
   }) {
     if (changeCheckboxRequested != null) {
@@ -371,31 +425,31 @@ abstract class _ChangeCheckboxRequested implements PickValueEvent {
 }
 
 /// @nodoc
-abstract class _$$AddStringsToListImplCopyWith<$Res> {
-  factory _$$AddStringsToListImplCopyWith(_$AddStringsToListImpl value,
-          $Res Function(_$AddStringsToListImpl) then) =
-      __$$AddStringsToListImplCopyWithImpl<$Res>;
+abstract class _$$AddCategoriesToListImplCopyWith<$Res> {
+  factory _$$AddCategoriesToListImplCopyWith(_$AddCategoriesToListImpl value,
+          $Res Function(_$AddCategoriesToListImpl) then) =
+      __$$AddCategoriesToListImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<String> strings});
+  $Res call({List<String> categories});
 }
 
 /// @nodoc
-class __$$AddStringsToListImplCopyWithImpl<$Res>
-    extends _$PickValueEventCopyWithImpl<$Res, _$AddStringsToListImpl>
-    implements _$$AddStringsToListImplCopyWith<$Res> {
-  __$$AddStringsToListImplCopyWithImpl(_$AddStringsToListImpl _value,
-      $Res Function(_$AddStringsToListImpl) _then)
+class __$$AddCategoriesToListImplCopyWithImpl<$Res>
+    extends _$PickValueEventCopyWithImpl<$Res, _$AddCategoriesToListImpl>
+    implements _$$AddCategoriesToListImplCopyWith<$Res> {
+  __$$AddCategoriesToListImplCopyWithImpl(_$AddCategoriesToListImpl _value,
+      $Res Function(_$AddCategoriesToListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? strings = null,
+    Object? categories = null,
   }) {
-    return _then(_$AddStringsToListImpl(
-      null == strings
-          ? _value._strings
-          : strings // ignore: cast_nullable_to_non_nullable
+    return _then(_$AddCategoriesToListImpl(
+      null == categories
+          ? _value._categories
+          : categories // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
   }
@@ -403,39 +457,41 @@ class __$$AddStringsToListImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddStringsToListImpl implements _AddStringsToList {
-  const _$AddStringsToListImpl(final List<String> strings) : _strings = strings;
+class _$AddCategoriesToListImpl implements _AddCategoriesToList {
+  const _$AddCategoriesToListImpl(final List<String> categories)
+      : _categories = categories;
 
-  final List<String> _strings;
+  final List<String> _categories;
   @override
-  List<String> get strings {
-    if (_strings is EqualUnmodifiableListView) return _strings;
+  List<String> get categories {
+    if (_categories is EqualUnmodifiableListView) return _categories;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_strings);
+    return EqualUnmodifiableListView(_categories);
   }
 
   @override
   String toString() {
-    return 'PickValueEvent.addStringsToList(strings: $strings)';
+    return 'PickValueEvent.addCategoriesToList(categories: $categories)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddStringsToListImpl &&
-            const DeepCollectionEquality().equals(other._strings, _strings));
+            other is _$AddCategoriesToListImpl &&
+            const DeepCollectionEquality()
+                .equals(other._categories, _categories));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_strings));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_categories));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddStringsToListImplCopyWith<_$AddStringsToListImpl> get copyWith =>
-      __$$AddStringsToListImplCopyWithImpl<_$AddStringsToListImpl>(
+  _$$AddCategoriesToListImplCopyWith<_$AddCategoriesToListImpl> get copyWith =>
+      __$$AddCategoriesToListImplCopyWithImpl<_$AddCategoriesToListImpl>(
           this, _$identity);
 
   @override
@@ -443,9 +499,12 @@ class _$AddStringsToListImpl implements _AddStringsToList {
   TResult when<TResult extends Object?>({
     required TResult Function(int radioIndex) changeRadioRequested,
     required TResult Function(int checkboxIndex) changeCheckboxRequested,
-    required TResult Function(List<String> strings) addStringsToList,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
   }) {
-    return addStringsToList(strings);
+    return addCategoriesToList(categories);
   }
 
   @override
@@ -453,9 +512,12 @@ class _$AddStringsToListImpl implements _AddStringsToList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int radioIndex)? changeRadioRequested,
     TResult? Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult? Function(List<String> strings)? addStringsToList,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
   }) {
-    return addStringsToList?.call(strings);
+    return addCategoriesToList?.call(categories);
   }
 
   @override
@@ -463,11 +525,14 @@ class _$AddStringsToListImpl implements _AddStringsToList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int radioIndex)? changeRadioRequested,
     TResult Function(int checkboxIndex)? changeCheckboxRequested,
-    TResult Function(List<String> strings)? addStringsToList,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
     required TResult orElse(),
   }) {
-    if (addStringsToList != null) {
-      return addStringsToList(strings);
+    if (addCategoriesToList != null) {
+      return addCategoriesToList(categories);
     }
     return orElse();
   }
@@ -478,9 +543,12 @@ class _$AddStringsToListImpl implements _AddStringsToList {
     required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
     required TResult Function(_ChangeCheckboxRequested value)
         changeCheckboxRequested,
-    required TResult Function(_AddStringsToList value) addStringsToList,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
   }) {
-    return addStringsToList(this);
+    return addCategoriesToList(this);
   }
 
   @override
@@ -488,9 +556,12 @@ class _$AddStringsToListImpl implements _AddStringsToList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult? Function(_AddStringsToList value)? addStringsToList,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
   }) {
-    return addStringsToList?.call(this);
+    return addCategoriesToList?.call(this);
   }
 
   @override
@@ -498,23 +569,517 @@ class _$AddStringsToListImpl implements _AddStringsToList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
     TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
-    TResult Function(_AddStringsToList value)? addStringsToList,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
     required TResult orElse(),
   }) {
-    if (addStringsToList != null) {
-      return addStringsToList(this);
+    if (addCategoriesToList != null) {
+      return addCategoriesToList(this);
     }
     return orElse();
   }
 }
 
-abstract class _AddStringsToList implements PickValueEvent {
-  const factory _AddStringsToList(final List<String> strings) =
-      _$AddStringsToListImpl;
+abstract class _AddCategoriesToList implements PickValueEvent {
+  const factory _AddCategoriesToList(final List<String> categories) =
+      _$AddCategoriesToListImpl;
 
-  List<String> get strings;
+  List<String> get categories;
   @JsonKey(ignore: true)
-  _$$AddStringsToListImplCopyWith<_$AddStringsToListImpl> get copyWith =>
+  _$$AddCategoriesToListImplCopyWith<_$AddCategoriesToListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddLanguageToListImplCopyWith<$Res> {
+  factory _$$AddLanguageToListImplCopyWith(_$AddLanguageToListImpl value,
+          $Res Function(_$AddLanguageToListImpl) then) =
+      __$$AddLanguageToListImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String language});
+}
+
+/// @nodoc
+class __$$AddLanguageToListImplCopyWithImpl<$Res>
+    extends _$PickValueEventCopyWithImpl<$Res, _$AddLanguageToListImpl>
+    implements _$$AddLanguageToListImplCopyWith<$Res> {
+  __$$AddLanguageToListImplCopyWithImpl(_$AddLanguageToListImpl _value,
+      $Res Function(_$AddLanguageToListImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+  }) {
+    return _then(_$AddLanguageToListImpl(
+      null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddLanguageToListImpl implements _AddLanguageToList {
+  const _$AddLanguageToListImpl(this.language);
+
+  @override
+  final String language;
+
+  @override
+  String toString() {
+    return 'PickValueEvent.addLanguageToList(language: $language)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddLanguageToListImpl &&
+            (identical(other.language, language) ||
+                other.language == language));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, language);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddLanguageToListImplCopyWith<_$AddLanguageToListImpl> get copyWith =>
+      __$$AddLanguageToListImplCopyWithImpl<_$AddLanguageToListImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int radioIndex) changeRadioRequested,
+    required TResult Function(int checkboxIndex) changeCheckboxRequested,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
+  }) {
+    return addLanguageToList(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int radioIndex)? changeRadioRequested,
+    TResult? Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
+  }) {
+    return addLanguageToList?.call(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int radioIndex)? changeRadioRequested,
+    TResult Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addLanguageToList != null) {
+      return addLanguageToList(language);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
+    required TResult Function(_ChangeCheckboxRequested value)
+        changeCheckboxRequested,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
+  }) {
+    return addLanguageToList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
+  }) {
+    return addLanguageToList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addLanguageToList != null) {
+      return addLanguageToList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddLanguageToList implements PickValueEvent {
+  const factory _AddLanguageToList(final String language) =
+      _$AddLanguageToListImpl;
+
+  String get language;
+  @JsonKey(ignore: true)
+  _$$AddLanguageToListImplCopyWith<_$AddLanguageToListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddFlagsToListImplCopyWith<$Res> {
+  factory _$$AddFlagsToListImplCopyWith(_$AddFlagsToListImpl value,
+          $Res Function(_$AddFlagsToListImpl) then) =
+      __$$AddFlagsToListImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<String> flags});
+}
+
+/// @nodoc
+class __$$AddFlagsToListImplCopyWithImpl<$Res>
+    extends _$PickValueEventCopyWithImpl<$Res, _$AddFlagsToListImpl>
+    implements _$$AddFlagsToListImplCopyWith<$Res> {
+  __$$AddFlagsToListImplCopyWithImpl(
+      _$AddFlagsToListImpl _value, $Res Function(_$AddFlagsToListImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? flags = null,
+  }) {
+    return _then(_$AddFlagsToListImpl(
+      null == flags
+          ? _value._flags
+          : flags // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddFlagsToListImpl implements _AddFlagsToList {
+  const _$AddFlagsToListImpl(final List<String> flags) : _flags = flags;
+
+  final List<String> _flags;
+  @override
+  List<String> get flags {
+    if (_flags is EqualUnmodifiableListView) return _flags;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_flags);
+  }
+
+  @override
+  String toString() {
+    return 'PickValueEvent.addFlagsToList(flags: $flags)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddFlagsToListImpl &&
+            const DeepCollectionEquality().equals(other._flags, _flags));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_flags));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddFlagsToListImplCopyWith<_$AddFlagsToListImpl> get copyWith =>
+      __$$AddFlagsToListImplCopyWithImpl<_$AddFlagsToListImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int radioIndex) changeRadioRequested,
+    required TResult Function(int checkboxIndex) changeCheckboxRequested,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
+  }) {
+    return addFlagsToList(flags);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int radioIndex)? changeRadioRequested,
+    TResult? Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
+  }) {
+    return addFlagsToList?.call(flags);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int radioIndex)? changeRadioRequested,
+    TResult Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addFlagsToList != null) {
+      return addFlagsToList(flags);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
+    required TResult Function(_ChangeCheckboxRequested value)
+        changeCheckboxRequested,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
+  }) {
+    return addFlagsToList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
+  }) {
+    return addFlagsToList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addFlagsToList != null) {
+      return addFlagsToList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddFlagsToList implements PickValueEvent {
+  const factory _AddFlagsToList(final List<String> flags) =
+      _$AddFlagsToListImpl;
+
+  List<String> get flags;
+  @JsonKey(ignore: true)
+  _$$AddFlagsToListImplCopyWith<_$AddFlagsToListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddTypeToListImplCopyWith<$Res> {
+  factory _$$AddTypeToListImplCopyWith(
+          _$AddTypeToListImpl value, $Res Function(_$AddTypeToListImpl) then) =
+      __$$AddTypeToListImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<String> type});
+}
+
+/// @nodoc
+class __$$AddTypeToListImplCopyWithImpl<$Res>
+    extends _$PickValueEventCopyWithImpl<$Res, _$AddTypeToListImpl>
+    implements _$$AddTypeToListImplCopyWith<$Res> {
+  __$$AddTypeToListImplCopyWithImpl(
+      _$AddTypeToListImpl _value, $Res Function(_$AddTypeToListImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+  }) {
+    return _then(_$AddTypeToListImpl(
+      null == type
+          ? _value._type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddTypeToListImpl implements _AddTypeToList {
+  const _$AddTypeToListImpl(final List<String> type) : _type = type;
+
+  final List<String> _type;
+  @override
+  List<String> get type {
+    if (_type is EqualUnmodifiableListView) return _type;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_type);
+  }
+
+  @override
+  String toString() {
+    return 'PickValueEvent.addTypeTolist(type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddTypeToListImpl &&
+            const DeepCollectionEquality().equals(other._type, _type));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_type));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddTypeToListImplCopyWith<_$AddTypeToListImpl> get copyWith =>
+      __$$AddTypeToListImplCopyWithImpl<_$AddTypeToListImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int radioIndex) changeRadioRequested,
+    required TResult Function(int checkboxIndex) changeCheckboxRequested,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
+  }) {
+    return addTypeTolist(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int radioIndex)? changeRadioRequested,
+    TResult? Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
+  }) {
+    return addTypeTolist?.call(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int radioIndex)? changeRadioRequested,
+    TResult Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addTypeTolist != null) {
+      return addTypeTolist(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
+    required TResult Function(_ChangeCheckboxRequested value)
+        changeCheckboxRequested,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
+  }) {
+    return addTypeTolist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
+  }) {
+    return addTypeTolist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
+    required TResult orElse(),
+  }) {
+    if (addTypeTolist != null) {
+      return addTypeTolist(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddTypeToList implements PickValueEvent {
+  const factory _AddTypeToList(final List<String> type) = _$AddTypeToListImpl;
+
+  List<String> get type;
+  @JsonKey(ignore: true)
+  _$$AddTypeToListImplCopyWith<_$AddTypeToListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -522,7 +1087,10 @@ abstract class _AddStringsToList implements PickValueEvent {
 mixin _$PickValueState {
   int get selectedOption => throw _privateConstructorUsedError;
   List<int> get selectedCheckboxes => throw _privateConstructorUsedError;
-  List<String> get checkboxTitles => throw _privateConstructorUsedError;
+  String get selectedCategories => throw _privateConstructorUsedError;
+  String get selectedFlags => throw _privateConstructorUsedError;
+  String get selectedLanguage => throw _privateConstructorUsedError;
+  String get selectedType => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PickValueStateCopyWith<PickValueState> get copyWith =>
@@ -538,7 +1106,10 @@ abstract class $PickValueStateCopyWith<$Res> {
   $Res call(
       {int selectedOption,
       List<int> selectedCheckboxes,
-      List<String> checkboxTitles});
+      String selectedCategories,
+      String selectedFlags,
+      String selectedLanguage,
+      String selectedType});
 }
 
 /// @nodoc
@@ -556,7 +1127,10 @@ class _$PickValueStateCopyWithImpl<$Res, $Val extends PickValueState>
   $Res call({
     Object? selectedOption = null,
     Object? selectedCheckboxes = null,
-    Object? checkboxTitles = null,
+    Object? selectedCategories = null,
+    Object? selectedFlags = null,
+    Object? selectedLanguage = null,
+    Object? selectedType = null,
   }) {
     return _then(_value.copyWith(
       selectedOption: null == selectedOption
@@ -567,10 +1141,22 @@ class _$PickValueStateCopyWithImpl<$Res, $Val extends PickValueState>
           ? _value.selectedCheckboxes
           : selectedCheckboxes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      checkboxTitles: null == checkboxTitles
-          ? _value.checkboxTitles
-          : checkboxTitles // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      selectedCategories: null == selectedCategories
+          ? _value.selectedCategories
+          : selectedCategories // ignore: cast_nullable_to_non_nullable
+              as String,
+      selectedFlags: null == selectedFlags
+          ? _value.selectedFlags
+          : selectedFlags // ignore: cast_nullable_to_non_nullable
+              as String,
+      selectedLanguage: null == selectedLanguage
+          ? _value.selectedLanguage
+          : selectedLanguage // ignore: cast_nullable_to_non_nullable
+              as String,
+      selectedType: null == selectedType
+          ? _value.selectedType
+          : selectedType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -586,7 +1172,10 @@ abstract class _$$PickValueStateImplCopyWith<$Res>
   $Res call(
       {int selectedOption,
       List<int> selectedCheckboxes,
-      List<String> checkboxTitles});
+      String selectedCategories,
+      String selectedFlags,
+      String selectedLanguage,
+      String selectedType});
 }
 
 /// @nodoc
@@ -602,7 +1191,10 @@ class __$$PickValueStateImplCopyWithImpl<$Res>
   $Res call({
     Object? selectedOption = null,
     Object? selectedCheckboxes = null,
-    Object? checkboxTitles = null,
+    Object? selectedCategories = null,
+    Object? selectedFlags = null,
+    Object? selectedLanguage = null,
+    Object? selectedType = null,
   }) {
     return _then(_$PickValueStateImpl(
       null == selectedOption
@@ -613,10 +1205,22 @@ class __$$PickValueStateImplCopyWithImpl<$Res>
           ? _value._selectedCheckboxes
           : selectedCheckboxes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      null == checkboxTitles
-          ? _value._checkboxTitles
-          : checkboxTitles // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      null == selectedCategories
+          ? _value.selectedCategories
+          : selectedCategories // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == selectedFlags
+          ? _value.selectedFlags
+          : selectedFlags // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == selectedLanguage
+          ? _value.selectedLanguage
+          : selectedLanguage // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == selectedType
+          ? _value.selectedType
+          : selectedType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -627,9 +1231,11 @@ class _$PickValueStateImpl implements _PickValueState {
   const _$PickValueStateImpl(
       [this.selectedOption = 0,
       final List<int> selectedCheckboxes = const [],
-      final List<String> checkboxTitles = const []])
-      : _selectedCheckboxes = selectedCheckboxes,
-        _checkboxTitles = checkboxTitles;
+      this.selectedCategories = '',
+      this.selectedFlags = '',
+      this.selectedLanguage = 'en',
+      this.selectedType = 'any'])
+      : _selectedCheckboxes = selectedCheckboxes;
 
   @override
   @JsonKey()
@@ -644,18 +1250,22 @@ class _$PickValueStateImpl implements _PickValueState {
     return EqualUnmodifiableListView(_selectedCheckboxes);
   }
 
-  final List<String> _checkboxTitles;
   @override
   @JsonKey()
-  List<String> get checkboxTitles {
-    if (_checkboxTitles is EqualUnmodifiableListView) return _checkboxTitles;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_checkboxTitles);
-  }
+  final String selectedCategories;
+  @override
+  @JsonKey()
+  final String selectedFlags;
+  @override
+  @JsonKey()
+  final String selectedLanguage;
+  @override
+  @JsonKey()
+  final String selectedType;
 
   @override
   String toString() {
-    return 'PickValueState(selectedOption: $selectedOption, selectedCheckboxes: $selectedCheckboxes, checkboxTitles: $checkboxTitles)';
+    return 'PickValueState(selectedOption: $selectedOption, selectedCheckboxes: $selectedCheckboxes, selectedCategories: $selectedCategories, selectedFlags: $selectedFlags, selectedLanguage: $selectedLanguage, selectedType: $selectedType)';
   }
 
   @override
@@ -667,8 +1277,14 @@ class _$PickValueStateImpl implements _PickValueState {
                 other.selectedOption == selectedOption) &&
             const DeepCollectionEquality()
                 .equals(other._selectedCheckboxes, _selectedCheckboxes) &&
-            const DeepCollectionEquality()
-                .equals(other._checkboxTitles, _checkboxTitles));
+            (identical(other.selectedCategories, selectedCategories) ||
+                other.selectedCategories == selectedCategories) &&
+            (identical(other.selectedFlags, selectedFlags) ||
+                other.selectedFlags == selectedFlags) &&
+            (identical(other.selectedLanguage, selectedLanguage) ||
+                other.selectedLanguage == selectedLanguage) &&
+            (identical(other.selectedType, selectedType) ||
+                other.selectedType == selectedType));
   }
 
   @override
@@ -676,7 +1292,10 @@ class _$PickValueStateImpl implements _PickValueState {
       runtimeType,
       selectedOption,
       const DeepCollectionEquality().hash(_selectedCheckboxes),
-      const DeepCollectionEquality().hash(_checkboxTitles));
+      selectedCategories,
+      selectedFlags,
+      selectedLanguage,
+      selectedType);
 
   @JsonKey(ignore: true)
   @override
@@ -690,14 +1309,23 @@ abstract class _PickValueState implements PickValueState {
   const factory _PickValueState(
       [final int selectedOption,
       final List<int> selectedCheckboxes,
-      final List<String> checkboxTitles]) = _$PickValueStateImpl;
+      final String selectedCategories,
+      final String selectedFlags,
+      final String selectedLanguage,
+      final String selectedType]) = _$PickValueStateImpl;
 
   @override
   int get selectedOption;
   @override
   List<int> get selectedCheckboxes;
   @override
-  List<String> get checkboxTitles;
+  String get selectedCategories;
+  @override
+  String get selectedFlags;
+  @override
+  String get selectedLanguage;
+  @override
+  String get selectedType;
   @override
   @JsonKey(ignore: true)
   _$$PickValueStateImplCopyWith<_$PickValueStateImpl> get copyWith =>

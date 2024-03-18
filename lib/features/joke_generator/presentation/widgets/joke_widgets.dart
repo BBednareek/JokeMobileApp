@@ -76,7 +76,7 @@ Widget chooseCategories() {
                         .add(PickValueEvent.changeCheckboxRequested(index));
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.addStringsToList(categories));
+                        .add(PickValueEvent.addCategoriesToList(categories));
                   },
                 );
               },
@@ -148,7 +148,7 @@ Widget chooseFlags() {
                         .add(PickValueEvent.changeCheckboxRequested(index));
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.addStringsToList(flags));
+                        .add(PickValueEvent.addFlagsToList(flags));
                   },
                 );
               },
@@ -220,7 +220,7 @@ Widget chooseType() {
                         .add(PickValueEvent.changeCheckboxRequested(index));
                     context
                         .read<PickValueBloc>()
-                        .add(PickValueEvent.addStringsToList(types));
+                        .add(PickValueEvent.addTypeTolist(types));
                   },
                 );
               },
@@ -283,9 +283,8 @@ Widget chooseLanguage() {
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeRadioRequested(index));
-                    context
-                        .read<PickValueBloc>()
-                        .add(PickValueEvent.addStringsToList(languages));
+                    context.read<PickValueBloc>().add(
+                        PickValueEvent.addLanguageToList(languages[index]));
                   },
                 );
               },

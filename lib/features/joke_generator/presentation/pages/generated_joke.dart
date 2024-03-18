@@ -3,15 +3,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:joke_app/core/di/injectable.dart';
 import 'package:joke_app/features/joke_generator/presentation/bloc/joke_bloc.dart';
 import 'package:joke_app/features/joke_generator/presentation/widgets/joke_widgets.dart';
+import 'package:joke_app/features/pick_value/bloc/pick_value_bloc.dart';
 
 class GeneratedJokeScreen extends StatelessWidget {
-  const GeneratedJokeScreen({super.key});
+  final PickValueBloc pickValueBloc;
+  const GeneratedJokeScreen({super.key, required this.pickValueBloc});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          JokeBloc(getJokeUsecase: locator())..add(const JokeEvent.getJoke()),
+      create: (context) => JokeBloc(
+        getJokeUsecase: locator(),
+        pickValueBloc: pickValueBloc,
+      )..add(const JokeEvent.getJoke()),
       child: const _GeneratedJokeScreen(),
     );
   }

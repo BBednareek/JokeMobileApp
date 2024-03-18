@@ -8,15 +8,17 @@ part 'pick_value_state.dart';
 
 @lazySingleton
 class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
-  PickValueBloc() : super(const PickValueState()) {
+  // ignore: prefer_const_constructors
+  PickValueBloc() : super(PickValueState()) {
     on<_ChangeRadioRequested>(_onChangeRadioRequested);
     on<_ChangeCheckboxRequested>(_onChangeCheckboxRequested);
-    on<_AddStringsToList>(_onAddStringsToList);
+    on<_AddCategoriesToList>(_onAddCategoriesToList);
+    on<_AddFlagsToList>(_onAddFlagsToList);
+    on<_AddLanguageToList>(_onAddLanguageToList);
+    on<_AddTypeToList>(_onAddTypeToList);
   }
   _onChangeRadioRequested(
       _ChangeRadioRequested event, Emitter<PickValueState> emit) async {
-    state.selectedCheckboxes.clear();
-    state.checkboxTitles.clear();
     emit(state.copyWith(selectedOption: event.radioIndex));
   }
 
@@ -30,6 +32,14 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
     emit(state.copyWith(selectedCheckboxes: selectedCheckboxes));
   }
 
-  _onAddStringsToList(
-      _AddStringsToList event, Emitter<PickValueState> emit) async {}
+  _onAddCategoriesToList(
+      _AddCategoriesToList event, Emitter<PickValueState> emit) async {}
+
+  _onAddFlagsToList(
+      _AddFlagsToList event, Emitter<PickValueState> emit) async {}
+
+  _onAddLanguageToList(
+      _AddLanguageToList event, Emitter<PickValueState> emit) async {}
+
+  _onAddTypeToList(_AddTypeToList event, Emitter<PickValueState> emit) async {}
 }
