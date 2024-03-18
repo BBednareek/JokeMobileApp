@@ -1,4 +1,4 @@
-import 'package:joke_app/core/constants/create_api_path/create_path.dart';
+import 'package:joke_app/core/constants/create_api_route/path_params/create_path.dart';
 
 enum JokeCategory {
   misc('Misc'),
