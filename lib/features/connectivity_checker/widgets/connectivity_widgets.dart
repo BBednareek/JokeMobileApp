@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:joke_app/core/constants/paths.dart';
 import 'package:joke_app/core/theme/inherited_widgets.dart';
 
 Widget onAvailableConnection(BuildContext context) {
@@ -18,7 +20,7 @@ Widget onAvailableConnection(BuildContext context) {
           width: buttonWidth,
           child: ElevatedButton(
             style: startingPageButton(context),
-            onPressed: () {},
+            onPressed: () => context.go(Pathes.generateJoke),
             child: Text(
               "Generate new joke",
               style: Theme.of(context).textTheme.displayMedium,
@@ -30,7 +32,7 @@ Widget onAvailableConnection(BuildContext context) {
           width: buttonWidth,
           child: ElevatedButton(
             style: startingPageButton(context),
-            onPressed: () {},
+            onPressed: () => context.go(Pathes.showFavourites),
             child: Text(
               "Favourite jokes",
               style: Theme.of(context).textTheme.displayMedium,

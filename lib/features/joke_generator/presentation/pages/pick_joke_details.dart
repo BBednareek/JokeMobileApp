@@ -21,7 +21,7 @@ class _PickJokeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: chooseCategories()),
+      body: SafeArea(child: pickValues()),
     );
   }
 }

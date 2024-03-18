@@ -20,3 +20,12 @@ List<String> types = [
   "single",
   "twopart",
 ];
+
+List<String> languages = [
+  'cs',
+  'en',
+  'de',
+  'es',
+  'fr',
+  'pt',
+];
