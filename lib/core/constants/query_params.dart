@@ -22,8 +22,8 @@ List<String> types = [
 ];
 
 List<String> languages = [
-  'cs',
   'en',
+  'cs',
   'de',
   'es',
   'fr',

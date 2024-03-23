@@ -64,6 +64,6 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
 
   _onClearLastChoices(
       _ClearLastChoices event, Emitter<PickValueState> emit) async {
-    emit(state.copyWith(selectedCheckboxes: [], selectedOption: 0));
+    emit(state.copyWith(selectedCheckboxes: [], selectedOption: -1));
   }
 }

@@ -48,7 +48,7 @@ Widget chooseCategories() {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Pick category of your joke or let the generator choose random for you",
+                "Pick category of your joke",
                 style: Theme.of(context).textTheme.displayLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground),
               ),
@@ -56,12 +56,14 @@ Widget chooseCategories() {
           ),
           RadioListTile(
             controlAffinity: ListTileControlAffinity.trailing,
-            value: state.selectedOption,
+            value: 0,
             groupValue: state.selectedOption,
             title: const Text("ANY"),
-            onChanged: (newValue) => context
-                .read<PickValueBloc>()
-                .add(const PickValueEvent.changeRadioRequested(0)),
+            onChanged: (newValue) {
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.clearLastChoices());
+            },
           ),
           Expanded(
             child: ListView.builder(
@@ -71,6 +73,11 @@ Widget chooseCategories() {
                   value: state.selectedCheckboxes.contains(index),
                   title: Text(categories[index]),
                   onChanged: (newValue) {
+                    if (newValue!) {
+                      context
+                          .read<PickValueBloc>()
+                          .add(const PickValueEvent.changeRadioRequested(-1));
+                    }
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
@@ -147,12 +154,14 @@ Widget chooseFlags() {
           ),
           RadioListTile(
             controlAffinity: ListTileControlAffinity.trailing,
-            value: state.selectedOption,
+            value: 0,
             groupValue: state.selectedOption,
             title: const Text("NONE"),
-            onChanged: (newValue) => context
-                .read<PickValueBloc>()
-                .add(const PickValueEvent.changeRadioRequested(0)),
+            onChanged: (newValue) {
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.clearLastChoices());
+            },
           ),
           Expanded(
             child: ListView.builder(
@@ -162,6 +171,11 @@ Widget chooseFlags() {
                   value: state.selectedCheckboxes.contains(index),
                   title: Text(flags[index]),
                   onChanged: (newValue) {
+                    if (newValue!) {
+                      context
+                          .read<PickValueBloc>()
+                          .add(const PickValueEvent.changeRadioRequested(-1));
+                    }
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
@@ -231,7 +245,7 @@ Widget chooseType() {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Tell us whether you want to see one or two parted joke",
+                "Choose joke type",
                 style: Theme.of(context).textTheme.displayLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground),
               ),
@@ -239,12 +253,17 @@ Widget chooseType() {
           ),
           RadioListTile(
             controlAffinity: ListTileControlAffinity.trailing,
-            value: state.selectedOption,
+            value: 0,
             groupValue: state.selectedOption,
             title: const Text("ANY"),
-            onChanged: (newValue) => context
-                .read<PickValueBloc>()
-                .add(const PickValueEvent.changeRadioRequested(0)),
+            onChanged: (newValue) {
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.changeRadioRequested(0));
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.clearLastChoices());
+            },
           ),
           Expanded(
             child: ListView.builder(
@@ -254,34 +273,21 @@ Widget chooseType() {
                   value: state.selectedCheckboxes.contains(index),
                   title: Text(types[index]),
                   onChanged: (newValue) {
+                    if (newValue!) {
+                      context
+                          .read<PickValueBloc>()
+                          .add(const PickValueEvent.changeRadioRequested(0));
+                    }
                     context
                         .read<PickValueBloc>()
                         .add(PickValueEvent.changeCheckboxRequested(index));
-
-                    Set<int> uniqueCheckboxIndices =
-                        Set.from(state.selectedCheckboxes);
-
-                    uniqueCheckboxIndices.contains(index)
-                        ? uniqueCheckboxIndices.remove(index)
-                        : uniqueCheckboxIndices.add(index);
-
-                    uniqueCheckboxIndices.toList().sort();
-
-                    List<String> checkboxTitles = uniqueCheckboxIndices
-                        .toList()
-                        .map((checkboxIndex) => types[checkboxIndex])
-                        .toList();
-
-                    context
-                        .read<PickValueBloc>()
-                        .add(PickValueEvent.addTypeTolist(checkboxTitles));
                   },
                 );
               },
             ),
           ),
           Padding(
-            padding: Paddings.all8,
+            padding: const EdgeInsets.all(8.0),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
@@ -323,7 +329,7 @@ Widget chooseLanguage() {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Choose language of your generated joke",
+                "Choose language",
                 style: Theme.of(context).textTheme.displayLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground),
               ),
@@ -335,8 +341,8 @@ Widget chooseLanguage() {
               itemBuilder: (context, index) {
                 return RadioListTile(
                   controlAffinity: ListTileControlAffinity.trailing,
-                  groupValue: index,
-                  value: state.selectedCheckboxes.contains(index),
+                  groupValue: state.selectedOption,
+                  value: index,
                   title: Text(languages[index]),
                   onChanged: (newValue) {
                     context
