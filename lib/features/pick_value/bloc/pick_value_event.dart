@@ -14,4 +14,5 @@ abstract class PickValueEvent with _$PickValueEvent {
       _AddFlagsToList;
   const factory PickValueEvent.addTypeTolist(List<String> type) =
       _AddTypeToList;
+  const factory PickValueEvent.clearLastChoices() = _ClearLastChoices;
 }

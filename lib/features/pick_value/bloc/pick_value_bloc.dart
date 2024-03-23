@@ -16,6 +16,7 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
     on<_AddFlagsToList>(_onAddFlagsToList);
     on<_AddLanguageToList>(_onAddLanguageToList);
     on<_AddTypeToList>(_onAddTypeToList);
+    on<_ClearLastChoices>(_onClearLastChoices);
   }
   _onChangeRadioRequested(
       _ChangeRadioRequested event, Emitter<PickValueState> emit) async {
@@ -59,5 +60,10 @@ class PickValueBloc extends Bloc<PickValueEvent, PickValueState> {
     String concatenatedType = selectedType.join(',');
 
     emit(state.copyWith(selectedType: concatenatedType));
+  }
+
+  _onClearLastChoices(
+      _ClearLastChoices event, Emitter<PickValueState> emit) async {
+    emit(state.copyWith(selectedCheckboxes: [], selectedOption: 0));
   }
 }

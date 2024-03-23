@@ -101,7 +101,12 @@ Widget chooseCategories() {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
-                onPressed: () => context.go(Pathes.pickLanguage),
+                onPressed: () {
+                  context.go(Pathes.pickLanguage);
+                  context
+                      .read<PickValueBloc>()
+                      .add(const PickValueEvent.clearLastChoices());
+                },
                 style: pageButton(context),
                 child: const Text("Next"),
               ),
@@ -188,7 +193,12 @@ Widget chooseFlags() {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
-                onPressed: () => context.go(Pathes.pickType),
+                onPressed: () {
+                  context.go(Pathes.pickType);
+                  context
+                      .read<PickValueBloc>()
+                      .add(const PickValueEvent.clearLastChoices());
+                },
                 style: pageButton(context),
                 child: const Text("Next"),
               ),
@@ -275,7 +285,12 @@ Widget chooseType() {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
-                onPressed: () => context.go(Pathes.getJoke),
+                onPressed: () {
+                  context.go(Pathes.getJoke);
+                  context
+                      .read<PickValueBloc>()
+                      .add(const PickValueEvent.clearLastChoices());
+                },
                 style: pageButton(context),
                 child: const Text("Generate your desired joke"),
               ),
@@ -339,7 +354,12 @@ Widget chooseLanguage() {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
-                onPressed: () => context.go(Pathes.pickFlags),
+                onPressed: () {
+                  context.go(Pathes.pickFlags);
+                  context
+                      .read<PickValueBloc>()
+                      .add(const PickValueEvent.clearLastChoices());
+                },
                 style: pageButton(context),
                 child: const Text("Next"),
               ),

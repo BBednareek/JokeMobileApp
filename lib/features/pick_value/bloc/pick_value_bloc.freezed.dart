@@ -24,6 +24,7 @@ mixin _$PickValueEvent {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$PickValueEvent {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,7 @@ mixin _$PickValueEvent {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +59,7 @@ mixin _$PickValueEvent {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +70,7 @@ mixin _$PickValueEvent {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +81,7 @@ mixin _$PickValueEvent {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -172,6 +178,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return changeRadioRequested(radioIndex);
   }
@@ -185,6 +192,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return changeRadioRequested?.call(radioIndex);
   }
@@ -198,6 +206,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (changeRadioRequested != null) {
@@ -216,6 +225,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return changeRadioRequested(this);
   }
@@ -229,6 +239,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return changeRadioRequested?.call(this);
   }
@@ -242,6 +253,7 @@ class _$ChangeRadioRequestedImpl implements _ChangeRadioRequested {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (changeRadioRequested != null) {
@@ -335,6 +347,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return changeCheckboxRequested(checkboxIndex);
   }
@@ -348,6 +361,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return changeCheckboxRequested?.call(checkboxIndex);
   }
@@ -361,6 +375,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (changeCheckboxRequested != null) {
@@ -379,6 +394,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return changeCheckboxRequested(this);
   }
@@ -392,6 +408,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return changeCheckboxRequested?.call(this);
   }
@@ -405,6 +422,7 @@ class _$ChangeCheckboxRequestedImpl implements _ChangeCheckboxRequested {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (changeCheckboxRequested != null) {
@@ -503,6 +521,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return addCategoriesToList(categories);
   }
@@ -516,6 +535,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return addCategoriesToList?.call(categories);
   }
@@ -529,6 +549,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addCategoriesToList != null) {
@@ -547,6 +568,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return addCategoriesToList(this);
   }
@@ -560,6 +582,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return addCategoriesToList?.call(this);
   }
@@ -573,6 +596,7 @@ class _$AddCategoriesToListImpl implements _AddCategoriesToList {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addCategoriesToList != null) {
@@ -664,6 +688,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return addLanguageToList(language);
   }
@@ -677,6 +702,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return addLanguageToList?.call(language);
   }
@@ -690,6 +716,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addLanguageToList != null) {
@@ -708,6 +735,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return addLanguageToList(this);
   }
@@ -721,6 +749,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return addLanguageToList?.call(this);
   }
@@ -734,6 +763,7 @@ class _$AddLanguageToListImpl implements _AddLanguageToList {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addLanguageToList != null) {
@@ -830,6 +860,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return addFlagsToList(flags);
   }
@@ -843,6 +874,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return addFlagsToList?.call(flags);
   }
@@ -856,6 +888,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addFlagsToList != null) {
@@ -874,6 +907,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return addFlagsToList(this);
   }
@@ -887,6 +921,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return addFlagsToList?.call(this);
   }
@@ -900,6 +935,7 @@ class _$AddFlagsToListImpl implements _AddFlagsToList {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addFlagsToList != null) {
@@ -995,6 +1031,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     required TResult Function(String language) addLanguageToList,
     required TResult Function(List<String> flags) addFlagsToList,
     required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
   }) {
     return addTypeTolist(type);
   }
@@ -1008,6 +1045,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     TResult? Function(String language)? addLanguageToList,
     TResult? Function(List<String> flags)? addFlagsToList,
     TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
   }) {
     return addTypeTolist?.call(type);
   }
@@ -1021,6 +1059,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     TResult Function(String language)? addLanguageToList,
     TResult Function(List<String> flags)? addFlagsToList,
     TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addTypeTolist != null) {
@@ -1039,6 +1078,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     required TResult Function(_AddLanguageToList value) addLanguageToList,
     required TResult Function(_AddFlagsToList value) addFlagsToList,
     required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
   }) {
     return addTypeTolist(this);
   }
@@ -1052,6 +1092,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     TResult? Function(_AddLanguageToList value)? addLanguageToList,
     TResult? Function(_AddFlagsToList value)? addFlagsToList,
     TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
   }) {
     return addTypeTolist?.call(this);
   }
@@ -1065,6 +1106,7 @@ class _$AddTypeToListImpl implements _AddTypeToList {
     TResult Function(_AddLanguageToList value)? addLanguageToList,
     TResult Function(_AddFlagsToList value)? addFlagsToList,
     TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
     required TResult orElse(),
   }) {
     if (addTypeTolist != null) {
@@ -1081,6 +1123,139 @@ abstract class _AddTypeToList implements PickValueEvent {
   @JsonKey(ignore: true)
   _$$AddTypeToListImplCopyWith<_$AddTypeToListImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ClearLastChoicesImplCopyWith<$Res> {
+  factory _$$ClearLastChoicesImplCopyWith(_$ClearLastChoicesImpl value,
+          $Res Function(_$ClearLastChoicesImpl) then) =
+      __$$ClearLastChoicesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearLastChoicesImplCopyWithImpl<$Res>
+    extends _$PickValueEventCopyWithImpl<$Res, _$ClearLastChoicesImpl>
+    implements _$$ClearLastChoicesImplCopyWith<$Res> {
+  __$$ClearLastChoicesImplCopyWithImpl(_$ClearLastChoicesImpl _value,
+      $Res Function(_$ClearLastChoicesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ClearLastChoicesImpl implements _ClearLastChoices {
+  const _$ClearLastChoicesImpl();
+
+  @override
+  String toString() {
+    return 'PickValueEvent.clearLastChoices()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearLastChoicesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int radioIndex) changeRadioRequested,
+    required TResult Function(int checkboxIndex) changeCheckboxRequested,
+    required TResult Function(List<String> categories) addCategoriesToList,
+    required TResult Function(String language) addLanguageToList,
+    required TResult Function(List<String> flags) addFlagsToList,
+    required TResult Function(List<String> type) addTypeTolist,
+    required TResult Function() clearLastChoices,
+  }) {
+    return clearLastChoices();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int radioIndex)? changeRadioRequested,
+    TResult? Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult? Function(List<String> categories)? addCategoriesToList,
+    TResult? Function(String language)? addLanguageToList,
+    TResult? Function(List<String> flags)? addFlagsToList,
+    TResult? Function(List<String> type)? addTypeTolist,
+    TResult? Function()? clearLastChoices,
+  }) {
+    return clearLastChoices?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int radioIndex)? changeRadioRequested,
+    TResult Function(int checkboxIndex)? changeCheckboxRequested,
+    TResult Function(List<String> categories)? addCategoriesToList,
+    TResult Function(String language)? addLanguageToList,
+    TResult Function(List<String> flags)? addFlagsToList,
+    TResult Function(List<String> type)? addTypeTolist,
+    TResult Function()? clearLastChoices,
+    required TResult orElse(),
+  }) {
+    if (clearLastChoices != null) {
+      return clearLastChoices();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeRadioRequested value) changeRadioRequested,
+    required TResult Function(_ChangeCheckboxRequested value)
+        changeCheckboxRequested,
+    required TResult Function(_AddCategoriesToList value) addCategoriesToList,
+    required TResult Function(_AddLanguageToList value) addLanguageToList,
+    required TResult Function(_AddFlagsToList value) addFlagsToList,
+    required TResult Function(_AddTypeToList value) addTypeTolist,
+    required TResult Function(_ClearLastChoices value) clearLastChoices,
+  }) {
+    return clearLastChoices(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult? Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult? Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult? Function(_AddLanguageToList value)? addLanguageToList,
+    TResult? Function(_AddFlagsToList value)? addFlagsToList,
+    TResult? Function(_AddTypeToList value)? addTypeTolist,
+    TResult? Function(_ClearLastChoices value)? clearLastChoices,
+  }) {
+    return clearLastChoices?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeRadioRequested value)? changeRadioRequested,
+    TResult Function(_ChangeCheckboxRequested value)? changeCheckboxRequested,
+    TResult Function(_AddCategoriesToList value)? addCategoriesToList,
+    TResult Function(_AddLanguageToList value)? addLanguageToList,
+    TResult Function(_AddFlagsToList value)? addFlagsToList,
+    TResult Function(_AddTypeToList value)? addTypeTolist,
+    TResult Function(_ClearLastChoices value)? clearLastChoices,
+    required TResult orElse(),
+  }) {
+    if (clearLastChoices != null) {
+      return clearLastChoices(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearLastChoices implements PickValueEvent {
+  const factory _ClearLastChoices() = _$ClearLastChoicesImpl;
 }
 
 /// @nodoc
