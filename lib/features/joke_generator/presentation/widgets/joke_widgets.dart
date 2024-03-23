@@ -62,6 +62,9 @@ Widget chooseCategories() {
             onChanged: (newValue) {
               context
                   .read<PickValueBloc>()
+                  .add(const PickValueEvent.changeRadioRequested(0));
+              context
+                  .read<PickValueBloc>()
                   .add(const PickValueEvent.clearLastChoices());
             },
           ),
@@ -158,6 +161,9 @@ Widget chooseFlags() {
             groupValue: state.selectedOption,
             title: const Text("NONE"),
             onChanged: (newValue) {
+              context
+                  .read<PickValueBloc>()
+                  .add(const PickValueEvent.changeRadioRequested(0));
               context
                   .read<PickValueBloc>()
                   .add(const PickValueEvent.clearLastChoices());

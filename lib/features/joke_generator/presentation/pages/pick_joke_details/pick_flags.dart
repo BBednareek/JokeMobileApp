@@ -20,6 +20,9 @@ class _PickFlagsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context
+        .read<PickValueBloc>()
+        .add(const PickValueEvent.changeRadioRequested(0));
     return Scaffold(
       body: SafeArea(child: chooseFlags()),
     );
